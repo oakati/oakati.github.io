@@ -3,4 +3,4 @@ layout: page
 title: "Resources"
 ---
 
-{% include embed.html url="https://youtu.be/ivT4r4EqRKQ" %}
+{% include embed.html url="https://www.youtube.com/embed/ivT4r4EqRKQ" %}
