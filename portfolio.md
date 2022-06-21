@@ -14,9 +14,9 @@ In this project, the main aim is to utilize the OV7670 Camera Module to take a p
 | [Linear-Equation-Solver](https://github.com/oakati/Linear-Equation-Solver)                                                                                            | This program implements the Gaussian elimination algorithm with partial pivoting together with backward substitution to solve Ax = b, where A is an n-n square matrix. The project was a part of EE 242 (Numerical Methods for EE) course.      |
 | [Secant-and-Bisection-Methods](https://github.com/oakati/Secant-and-Bisection-Methods)                                                                                | This project implements secant and bisection algorithms in order to solve f(x)=0 for any given polynomial f. This project was a part of EE 242 (Numerical Methods for EE) course.      |
 | [Calculating-Maximum-Sum-of-An-Orthogonal-Triangle](https://github.com/oakati/Calculating-Maximum-Sum-of-An-Orthogonal-Triangle)                                      | This program calculates the maximum sum of co-adjacent and all-non-prime numbers from top to bottom of a orthogonal pyramid. |
-| [Dithering](https://github.com/oakati/Dithering)                                                                                                                      | 9 entry     |
-| [Central-Limit-Theorem](https://github.com/oakati/Central-Limit-Theorem)                                                                                              | 10 entry      |
-| [Frequency-Domain-Equalization-and-Channel-Equalization-Algorithms](https://github.com/oakati/Frequency-Domain-Equalization-and-Channel-Equalization-Algorithms)      | 11 entry      |
+| [Dithering](https://github.com/oakati/Dithering)                                                                                                                      | TBA     |
+| [Central-Limit-Theorem](https://github.com/oakati/Central-Limit-Theorem)                                                                                              | TBA      |
+| [Frequency-Domain-Equalization-and-Channel-Equalization-Algorithms](https://github.com/oakati/Frequency-Domain-Equalization-and-Channel-Equalization-Algorithms)      | TBA      |
 
 <!-- * [EE-443-Microprocessors-Labs](https://github.com/oakati/EE-443-Microprocessors-Labs)
 * [LeetCode](https://github.com/oakati/LeetCode)
