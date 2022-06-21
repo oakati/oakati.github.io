@@ -7,10 +7,10 @@ title: "Portfolio"
 
 | Repository       | Description      |
 |------------------|------------------|
-| [EE-443-Microprocessors-Labs](https://github.com/oakati/EE-443-Microprocessors-Labs)| First entry 
-| [LeetCode](https://github.com/oakati/LeetCode)                                                                                                                        | Second entry      |
-| [Post-Filtering-Photographic-Tool](https://github.com/oakati/Post-Filtering-Photographic-Tool)                                                                        | Third entry      |
-| [Eigenvalues-and-Eigenvectors-Calculator](https://github.com/oakati/Eigenvalues-and-Eigenvectors-Calculator)                                                          | Fourth entry |
+| [EE-443-Microprocessors-Labs](https://github.com/oakati/EE-443-Microprocessors-Labs)| 1 entry 
+| [LeetCode](https://github.com/oakati/LeetCode)                                                                                                                        | 2 entry      |
+| [Post-Filtering-Photographic-Tool](https://github.com/oakati/Post-Filtering-Photographic-Tool)                                                                        | 3 entry      |
+| [Eigenvalues-and-Eigenvectors-Calculator](https://github.com/oakati/Eigenvalues-and-Eigenvectors-Calculator)                                                          | 4 entry |
 | [Ansys-HFSS-Data-Extractor-Script-Generator](https://github.com/oakati/Ansys-HFSS-Data-Extractor-Script-Generator)                                                    | 5 entry     |
 | [Linear-Equation-Solver](https://github.com/oakati/Linear-Equation-Solver)                                                                                            | 6 entry      |
 | [Secant-and-Bisection-Methods](https://github.com/oakati/Secant-and-Bisection-Methods)                                                                                | 7 entry      |
