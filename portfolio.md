@@ -3,8 +3,6 @@ layout: page
 title: "Portfolio"
 ---
 
-## Table
-
 | Repository       | Description      |
 |------------------|------------------|
 | [EE-443-Microprocessors-Labs](https://github.com/oakati/EE-443-Microprocessors-Labs)| 1 entry 
