@@ -3,8 +3,6 @@ layout: page
 title: ""
 ---
 
-I'm an assistant professor in the [Linguistics Department](https://www.ling.upenn.edu) at the University of Pennsylvania and the director of the [Child Language Lab](http://childlanglab.com/). 
+I am an senior undergraduate student in the [Electrical and Electronics Engineering Department](https://ee.boun.edu.tr/) at [Boğaziçi Üniversitesi](http://www.boun.edu.tr/en-US/Index). My expected graduation date is Januray 2023. I was an Erasmus student at [Politechnika Poznańska (PUT)](https://www.put.poznan.pl/en), Poland, in Spring 2021. 
 
-I teach graduate seminars in [psycholinguistics](/ling607) and [neurolinguistics](/neurolinguistics) and an undergraduate course in [language and the brain](/ling104). Occasionally, I also teach [LING 1](/ling001), Penn's Introduction to Linguistics.
-
-This semester I'm teaching a new undergraduate course (with Colin Twomey): [Data Science for Studying Language and the Mind](/ling172).
+I was with [Antennas and Propagation Research Laboratory (BOUNtenna)](https://bountenna.boun.edu.tr/), İstanbul, Türkiye, as a Undergraduate Research Assistant from July 2019 to March 2022. My current research interests include signal processing, communication systems and software development.
