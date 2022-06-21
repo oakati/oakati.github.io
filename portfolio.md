@@ -7,9 +7,8 @@ title: "Portfolio"
 
 | Repository       | Description      |
 |------------------|------------------|
-| [EE-443-Microprocessors-Labs](https://github.com/oakati/EE-443-Microprocessors-Labs)                                                                                
-| First entry     |
-<!-- | [LeetCode](https://github.com/oakati/LeetCode)                                                                                                                        | Second entry      |
+| [EE-443-Microprocessors-Labs](https://github.com/oakati/EE-443-Microprocessors-Labs)| First entry 
+| [LeetCode](https://github.com/oakati/LeetCode)                                                                                                                        | Second entry      |
 | [Post-Filtering-Photographic-Tool](https://github.com/oakati/Post-Filtering-Photographic-Tool)                                                                        | Third entry      |
 | [Eigenvalues-and-Eigenvectors-Calculator](https://github.com/oakati/Eigenvalues-and-Eigenvectors-Calculator)                                                          | Fourth entry |
 | [Ansys-HFSS-Data-Extractor-Script-Generator](https://github.com/oakati/Ansys-HFSS-Data-Extractor-Script-Generator)                                                    | 5 entry     |
@@ -18,7 +17,7 @@ title: "Portfolio"
 | [Calculating-Maximum-Sum-of-An-Orthogonal-Triangle](https://github.com/oakati/Calculating-Maximum-Sum-of-An-Orthogonal-Triangle)                                      | 8 entry |
 | [Dithering](https://github.com/oakati/Dithering)                                                                                                                      | 9 entry     |
 | [Central-Limit-Theorem](https://github.com/oakati/Central-Limit-Theorem)                                                                                              | 10 entry      |
-| [Frequency-Domain-Equalization-and-Channel-Equalization-Algorithms](https://github.com/oakati/Frequency-Domain-Equalization-and-Channel-Equalization-Algorithms)      | 11 entry      | -->
+| [Frequency-Domain-Equalization-and-Channel-Equalization-Algorithms](https://github.com/oakati/Frequency-Domain-Equalization-and-Channel-Equalization-Algorithms)      | 11 entry      |
 
 <!-- * [EE-443-Microprocessors-Labs](https://github.com/oakati/EE-443-Microprocessors-Labs)
 * [LeetCode](https://github.com/oakati/LeetCode)
