@@ -1,7 +1,7 @@
 
 title: "Ömer Alperen Katı"
 author: "Ömer Katı"
-description: "Made with [Jekyll](https://jekyllthemes.io/), hosted on [Github Pages](https://github.com/oakati/oakati.github.io)"
+description: "Made with Jekyll, hosted on Github Pages"
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
