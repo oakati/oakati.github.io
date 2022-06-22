@@ -26,4 +26,5 @@ permalink: /contact/
             <label class="mr-2">Attachment:</label>
             <input type="file" name="file">
           </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
           <hr>
