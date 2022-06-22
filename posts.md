@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Coming Soon"
+title: "Posts"
 ---
 <!-- {% if site.show_excerpts %}
   {% include home.html %}
