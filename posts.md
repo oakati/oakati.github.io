@@ -2,7 +2,7 @@
 layout: default
 title: "Posts"
 ---
-Coming Soon
+# Coming Soon
 
 <!-- {% if site.show_excerpts %}
   {% include home.html %}
