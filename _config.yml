@@ -21,7 +21,7 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "publications.md"}
   - {file: "posts.md"}
   - {file: "resources.md"}
-  - {file: "contactme.html"}
+  - {file: "contact.md"}
 
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
