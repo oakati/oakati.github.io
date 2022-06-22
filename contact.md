@@ -19,10 +19,7 @@ permalink: /contact/
           </div>
           <div class="form-group">
             <label for="exampleInputName"></label>
-         <br>
-         <textarea rows = "5" cols = "60" name = "description" placeholder="Message">
-            Message
-         </textarea><br>          
+            <input type="text" name="name" class="form-control" id="exampleInputName" placeholder="Message" required="required">
           </div>
           <hr>
           <div class="form-group mt-3">
@@ -30,5 +27,3 @@ permalink: /contact/
             <input type="file" name="file">
           </div>
           <hr>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
