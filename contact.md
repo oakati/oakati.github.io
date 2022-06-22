@@ -19,7 +19,7 @@ permalink: /contact/
           </div>
           <div class="form-group">
             <label for="exampleInputName"></label>
-            <input type="text" name="name" class="form-control" id="exampleInputName" placeholder="Essage" required="required">
+            <input type="text" name="name" class="form-control" id="exampleInputName" placeholder="Message" required="required">
           </div>
           <hr>
           <div class="form-group mt-3">
