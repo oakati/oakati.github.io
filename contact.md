@@ -4,10 +4,7 @@ title: Contact
 permalink: /contact/ 
 ---
 
-<!--Grid column-->
-<div class="row">
-  <!--Grid column-->
-  <div class="col-md-9 mb-md-0 mb-5">
+
     <form accept-charset="UTF-8" action="https://getform.io/f/6306f063-5eba-4c08-b8f7-9f2001abdc51" method="POST" enctype="multipart/form-data" target="_blank">
       <!--Grid row-->
       <div class="row">
@@ -59,6 +56,4 @@ permalink: /contact/
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </div>
-  </div>
-  <!--Grid column-->
-</div>
+
