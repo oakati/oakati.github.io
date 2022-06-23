@@ -21,9 +21,9 @@ permalink: /contact/
             <input type="text" name="name" class="form-control" id="exampleInputName" placeholder="Message" required="required">
           </div>
           <hr>
-          <div class="form-group mt-3">
+<!--           <div class="form-group mt-3">
             <label class="mr-2">Attachment:</label>
             <input type="file" name="file">
-          </div>
+          </div> -->
                     <button type="submit" class="btn btn-primary">Submit</button>
           <hr>
