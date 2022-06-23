@@ -1,9 +1,3 @@
----
-layout: page
-title: ""
-permalink: /contact/
----
-
 <!DOCTYPE html>
 <html lang="en">
 
