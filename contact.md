@@ -21,10 +21,10 @@ permalink: /contact/
             <label for="exampleInputName"></label>
             <input type="text" name="name" class="form-control" id="exampleInputName" placeholder="Message" required="required">
           </div>
-          <hr>
+          <button type="submit" class="btn btn-primary">Submit</button>
+<!--           <hr>
           <div class="form-group mt-3">
             <label class="mr-2">Attachment:</label>
             <input type="file" name="file">
           </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-          <hr>
+          <hr> -->
