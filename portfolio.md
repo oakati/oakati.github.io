@@ -16,7 +16,7 @@ title: "Portfolio"
 | [Dithering](https://github.com/oakati/Dithering)                                                                                                                      | An image processing algorithm written in C.     |
 | [Central-Limit-Theorem](https://github.com/oakati/Central-Limit-Theorem)                                                                                              | Simulations proving Central Limit Theorem in Matlab      |
 | [Frequency-Domain-Equalization-and-Channel-Equalization-Algorithms](https://github.com/oakati/Frequency-Domain-Equalization-and-Channel-Equalization-Algorithms)      | Simulations of Frequency Domain and Channel Equalization in Matlab      |
-|(Chatbot-Argel)[https://github.com/oakati/Chatbot-Argel]| A chatbot developed by using Rasa to answer the questions of interns.|
+|[Chatbot-Argel](https://github.com/oakati/Chatbot-Argel)| A chatbot developed by using Rasa to answer the questions of interns.|
 
 <!-- * [EE-443-Microprocessors-Labs](https://github.com/oakati/EE-443-Microprocessors-Labs)
 * [LeetCode](https://github.com/oakati/LeetCode)
