@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "about me"
+title: "About Me"
 ---
 <head>
   <meta http-equiv='cache-control' content='no-cache'> 
