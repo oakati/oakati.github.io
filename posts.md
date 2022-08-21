@@ -3,8 +3,8 @@ layout: default
 title: "Posts"
 ---
 
-{% raw %}{% seo %}{% endraw %}
-
+<!-- {% raw %}{% seo %}{% endraw %}
+ -->
 
 <!-- {% if site.show_excerpts %}
   {% include home.html %}
