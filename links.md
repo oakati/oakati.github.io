@@ -3,6 +3,8 @@ layout: page
 title: "Links"
 ---
 
+{% raw %}{% seo %}{% endraw %}
+
 ### Some links
 * [Ultimate EMF Detector](https://play.google.com/store/apps/details?id=com.mreprogramming.ultimateemfdetector&hl=tr&gl=US) 
 * [ParseHub (Free web scraping tool)](https://www.parsehub.com/)
