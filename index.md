@@ -3,7 +3,7 @@ layout: page
 title: "About Me"
 charset: "UTF-8"
 description: "A brief bio of Ömer Alperen Katı"
-keywords: "Ömer Alperen Katı, Ömer A. Katı, Ömer Katı, Omer Alperen Kati, Omer A. Kati, Omer Kati, boğaziçi, boun, elektronik, ee, bountenna, aselsan, turkcell, poilabs, Politechnika Poznańska"
+keywords: "Ömer Alperen Katı, Ömer A. Katı, Ömer Katı, Omer Alperen Kati, Omer A. Kati, Omer Kati, boğaziçi, boun, electronics, ee, bountenna, aselsan, turkcell, poilabs, Politechnika Poznańska"
 author: "Ömer Alperen Katı"
 viewport: "width=device-width, initial-scale=1.0"
 ---
