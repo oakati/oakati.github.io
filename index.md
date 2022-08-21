@@ -14,7 +14,7 @@ layout: page
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <meta name='description' content='Senior electrical and electronics engineering student specialized in telecommunications at Boğaziçi Üniversitesi, İstanbul, Türkiye.'>
   <meta name='title' content='Ömer Alperen Katı: Home'>
-  <link rel="shortcut icon" type="image/png" href="favico.ico">
+  <link rel="shortcut icon" type="image/ico" href="favico.ico">
 </head>
 
 I am a senior undergraduate student in the [Electrical and Electronics Engineering Department](https://ee.boun.edu.tr/) at [Boğaziçi Üniversitesi](http://www.boun.edu.tr/en-US/Index), İstanbul, Türkiye. My expected graduation date is January 2023. I was an Erasmus student at [Politechnika Poznańska (PUT)](https://www.put.poznan.pl/en), Poznań, Poland, in Spring 2021. 
