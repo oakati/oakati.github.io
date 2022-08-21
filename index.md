@@ -1,11 +1,5 @@
 ---
 layout: page
-title: "The official website of Ömer Alperen Katı"
-charset: "UTF-8"
-keywords: "Ömer Alperen Katı, Ömer A. Katı, Ömer Katı, Omer Alperen Kati, Omer A. Kati, Omer Kati, boğaziçi, boun, electronics, ee, bountenna, aselsan, turkcell, poilabs, Politechnika Poznańska"
-author: "Ömer Alperen Katı"
-viewport: "width=device-width, initial-scale=1.0"
-description: "A brief bio of Ömer Alperen Katı"
 ---
 
 {% raw %}{% seo %}{% endraw %}
