@@ -3,6 +3,8 @@ layout: page
 title: "Publications"
 ---
 
+{% raw %}{% seo %}{% endraw %}
+
 ## Journal Papers
 
 1. E. Cil, C. Cadir, O. A. Kati, H. Birkan Yilmaz and S. Dumanli, [Machine Learning-Based Matching Medium Design for Implant Communications,"](https://ieeexplore.ieee.org/document/9677970) in IEEE Transactions on Antennas and Propagation.
