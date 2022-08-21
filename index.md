@@ -13,7 +13,7 @@ layout: page
   <meta name='author' content='Ömer Alperen Katı'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <meta name='description' content='Senior electrical and electronics engineering student specialized in telecommunications at Boğaziçi Üniversitesi, İstanbul, Türkiye.'>
-  <meta name='title' content='Ömer Alperen Katı'>
+  <meta name='title' content='Ömer Alperen Katı: Home'>
   <link rel="shortcut icon" type="image/png" href="favico.ico">
 </head>
 
