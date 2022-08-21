@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Publications"
-background-image: url('https://raw.githubusercontent.com/oakati/oakati.github.io/main/Galata_Ivan.png')
+background-image: url("https://raw.githubusercontent.com/oakati/oakati.github.io/main/Galata_Ivan.png")
 ---
 
 ## Journal Papers
