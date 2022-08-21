@@ -3,6 +3,8 @@ layout: page
 title: "Portfolio"
 ---
 
+{% raw %}{% seo %}{% endraw %}
+
 | Repository       | Description      |
 |------------------|------------------|
 | [EE-443-Microprocessors-Labs](https://github.com/oakati/EE-443-Microprocessors-Labs)| Assembly or C programs realized on a evaluation board (De1-SoC) during the laboratory experiments of EE 443 (Microprocessors) course. 
