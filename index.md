@@ -1,12 +1,17 @@
 ---
 layout: page
 title: "About Me"
+charset: "UTF-8"
+description: "A brief bio of Ömer Alperen Katı"
+keywords: "Ömer Alperen Katı, Ömer A. Katı, Ömer Katı, Omer Alperen Kati, Omer A. Kati, Omer Kati, boğaziçi, boun, elektronik, ee, bountenna, aselsan, turkcell, poilabs, Politechnika Poznańska"
+author: "Ömer Alperen Katı"
+viewport: "width=device-width, initial-scale=1.0"
 ---
-<head>
+<!-- <head>
   <meta http-equiv='cache-control' content='no-cache'> 
   <meta http-equiv='expires' content='0'> 
   <meta http-equiv='pragma' content='no-cache'>
-</head>
+</head> -->
   
 I am a senior undergraduate student in the [Electrical and Electronics Engineering Department](https://ee.boun.edu.tr/) at [Boğaziçi Üniversitesi](http://www.boun.edu.tr/en-US/Index), İstanbul, Türkiye. My expected graduation date is January 2023. I was an Erasmus student at [Politechnika Poznańska (PUT)](https://www.put.poznan.pl/en), Poznań, Poland, in Spring 2021. 
 
