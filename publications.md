@@ -1,7 +1,6 @@
 ---
 layout: page
 title: "Publications"
-background-image: url(asset_path("Galata_Ivan.png"))
 ---
 
 ## Journal Papers
