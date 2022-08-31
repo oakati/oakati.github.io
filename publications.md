@@ -6,6 +6,9 @@ title: "Publications"
 <!-- {% raw %}{% seo %}{% endraw %}
  -->
  
+ <head>
+</head>
+ 
  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTC6RSBSSV"></script>
 <script>
