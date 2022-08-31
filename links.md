@@ -10,14 +10,14 @@ title: "Links"
  <head>
 </head>
  
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTC6RSBSSV"></script>
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTC6RSBSSV"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-TTC6RSBSSV');
-</script>
+</script> -->
 
 ### Some links
 * [Ultimate EMF Detector](https://play.google.com/store/apps/details?id=com.mreprogramming.ultimateemfdetector&hl=tr&gl=US) 
