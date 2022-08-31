@@ -5,14 +5,7 @@ title: "About me"
 
 <!-- {% raw %}{% seo %}{% endraw %}
  -->
-     <style type="text/css">
-    .image-left {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      float: right;
-    }
-    </style>
+
 <head>
   <meta http-equiv='cache-control' content='no-cache'> 
   <meta http-equiv='expires' content='0'> 
@@ -24,8 +17,16 @@ title: "About me"
   <meta name='description' content='Senior electrical and electronics engineering student specialized in telecommunications at Boğaziçi Üniversitesi, İstanbul, Türkiye.'>
   <meta name='title' content='Ömer Alperen Katı: Home'>
   <link rel="shortcut icon" type="image/ico" href="favico.ico">
+ 
 </head>
-
+     <style type="text/css">
+    .image-left {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      float: right;
+    }
+    </style>
 ![Me](https://scholar.googleusercontent.com/citations?view_op=view_photo&user=Ae0LSsUAAAAJ&citpid=3)
 
 ![Proguard](https://scholar.googleusercontent.com/citations?view_op=view_photo&user=Ae0LSsUAAAAJ&citpid=3){: .image-left }I am a senior undergraduate student in the [Electrical and Electronics Engineering Department](https://ee.boun.edu.tr/) at [Boğaziçi Üniversitesi](http://www.boun.edu.tr/en-US/Index), İstanbul, Türkiye. My expected graduation date is January 2023. I was an Erasmus student at [Politechnika Poznańska (PUT)](https://www.put.poznan.pl/en), Poznań, Poland, in Spring 2021. 
