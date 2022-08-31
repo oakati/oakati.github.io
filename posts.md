@@ -18,6 +18,8 @@ title: "Posts"
 
   gtag('config', 'G-TTC6RSBSSV');
 </script>
+
+Coming soon
 <!-- {% if site.show_excerpts %}
   {% include home.html %}
 {% else %}
