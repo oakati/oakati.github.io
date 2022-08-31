@@ -27,6 +27,7 @@ title: "About me"
       float: right;
     }
     </style>
+    
 ![Me](https://scholar.googleusercontent.com/citations?view_op=view_photo&user=Ae0LSsUAAAAJ&citpid=3)
 
 ![Proguard](https://scholar.googleusercontent.com/citations?view_op=view_photo&user=Ae0LSsUAAAAJ&citpid=3){: .image-left }I am a senior undergraduate student in the [Electrical and Electronics Engineering Department](https://ee.boun.edu.tr/) at [Boğaziçi Üniversitesi](http://www.boun.edu.tr/en-US/Index), İstanbul, Türkiye. My expected graduation date is January 2023. I was an Erasmus student at [Politechnika Poznańska (PUT)](https://www.put.poznan.pl/en), Poznań, Poland, in Spring 2021. 
