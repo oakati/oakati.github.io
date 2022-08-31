@@ -5,19 +5,19 @@ permalink: /contact/
 ---
 <!-- {% raw %}{% seo %}{% endraw %}
  -->
- <!-- Google tag (gtag.js) -->
+
   
  <head>
 </head>
- 
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTC6RSBSSV"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTC6RSBSSV"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-TTC6RSBSSV');
-</script> -->
+</script>
 
 <form accept-charset="UTF-8" action="https://getform.io/f/6306f063-5eba-4c08-b8f7-9f2001abdc51" method="POST" enctype="multipart/form-data" target="_blank">
           <div class="form-group">
