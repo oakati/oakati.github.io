@@ -10,7 +10,7 @@ title: "About me"
   <meta http-equiv='expires' content='0'> 
   <meta http-equiv='pragma' content='no-cache'>
   <meta name='charset' content='UTF-8'>
-  <meta name='keywords' content='Ömer Alperen Katı, Ömer A. Katı, Ömer Katı, Omer Alperen Kati, Omer A. Kati, Omer Kati, boğaziçi, boun, electronics, ee, bountenna, aselsan, turkcell, poilabs, Politechnika Poznańska'>
+  <meta name='keywords' content='Ömer Alperen Katı, Ömer A. Katı, Ömer Katı, Omer Alperen Kati, Omer A. Kati, Omer Kati, boğaziçi, boun, electronics, ee, bountenna, aselsan, turkcell, poilabs, Politechnika Poznańska, erasmus, embedded software'>
   <meta name='author' content='Ömer Alperen Katı'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <meta name='description' content='Senior electrical and electronics engineering student specialized in telecommunications at Boğaziçi Üniversitesi, İstanbul, Türkiye.'>
