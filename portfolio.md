@@ -2,7 +2,15 @@
 layout: page
 title: "Portfolio"
 ---
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTC6RSBSSV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-TTC6RSBSSV');
+</script>
 | Repository       | Description      |
 |------------------|------------------|
 | [EE-443-Microprocessors-Labs](https://github.com/oakati/EE-443-Microprocessors-Labs)| Assembly or C programs realized on a evaluation board (De1-SoC) during the laboratory experiments of EE 443 (Microprocessors) course. 
