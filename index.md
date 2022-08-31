@@ -18,6 +18,8 @@ title: "About me"
   <link rel="shortcut icon" type="image/ico" href="favico.ico">
 </head>
 
+![Me](https://scholar.googleusercontent.com/citations?view_op=view_photo&user=Ae0LSsUAAAAJ&citpid=3)
+
 I am a senior undergraduate student in the [Electrical and Electronics Engineering Department](https://ee.boun.edu.tr/) at [Boğaziçi Üniversitesi](http://www.boun.edu.tr/en-US/Index), İstanbul, Türkiye. My expected graduation date is January 2023. I was an Erasmus student at [Politechnika Poznańska (PUT)](https://www.put.poznan.pl/en), Poznań, Poland, in Spring 2021. 
 
 I was with [Antennas and Propagation Research Laboratory (BOUNtenna)](https://bountenna.boun.edu.tr/), İstanbul, Türkiye, as an Undergraduate Research Assistant from July 2019 to March 2022. Also, I did two internships at [Turkcell](https://www.turkcell.com.tr/english-support) and [ASELSAN](https://aselsan.com.tr/en) during the summers of 2020 and 2021, respectively.
