@@ -6,6 +6,10 @@ title: "Posts"
 <!-- {% raw %}{% seo %}{% endraw %}
  -->
 <!-- Google tag (gtag.js) -->
+ 
+ <head>
+</head>
+ 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTC6RSBSSV"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
