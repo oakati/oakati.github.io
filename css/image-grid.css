@@ -13,3 +13,8 @@
   grid-auto-rows: 250px;
   grid-auto-flow: dense;
 }
+
+/**** stretch vertically *****/
+.v-stretch{
+   grid-row: span 2;
+}
