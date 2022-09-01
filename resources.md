@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Links"
+title: "Resources"
 ---
 
 <!-- {% raw %}{% seo %}{% endraw %}
