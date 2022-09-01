@@ -19,46 +19,46 @@ title: "Gallery"
 
 <div class = "gallery">
   <div class="">
-    <img src="images/gallery/1.jpeg" alt="">
+    <img src="https://oakati.github.io/images/gallery/1.jpeg" alt="">
   </div>
     <div class="v-stretch">
-    <img src="images/gallery/2.jpeg" alt="">
+    <img src="https://oakati.github.io/images/gallery/2.jpeg" alt="">
   </div>
     <div class="h-stretch">
-    <img src="images/gallery/3.jpeg" alt="">
+    <img src="https://oakati.github.io/images/gallery/3.jpeg" alt="">
   </div>
     <div class="">
-    <img src="images/gallery/4.jpeg" alt="">
+    <img src="https://oakati.github.io/images/gallery/4.jpeg" alt="">
   </div>
     <div class="">
-    <img src="images/gallery/5.jpeg" alt="">
+    <img src="https://oakati.github.io/images/gallery/5.jpeg" alt="">
   </div>
     <div class="v-stretch">
-    <img src="images/gallery/6.jpeg" alt="">
+    <img src="https://oakati.github.io/images/gallery/6.jpeg" alt="">
   </div>
     <div class="big-stretch">
-    <img src="images/gallery/7.jpeg" alt="">
+    <img src="https://oakati.github.io/images/gallery/7.jpeg" alt="">
   </div>
     <div class="">
-    <img src="images/gallery/8.jpeg" alt="">
+    <img src="https://oakati.github.io/images/gallery/8.jpeg" alt="">
   </div>
     <div class="h-stretch">
-    <img src="images/gallery/9.jpeg" alt="">
+    <img src="https://oakati.github.io/images/gallery/9.jpeg" alt="">
   </div>
     <div class="">
-    <img src="images/gallery/10.jpeg" alt="">
+    <img src="https://oakati.github.io/images/gallery/10.jpeg" alt="">
   </div>
     <div class="">
-    <img src="images/gallery/11.jpeg" alt="">
+    <img src="https://oakati.github.io/images/gallery/11.jpeg" alt="">
   </div>
     <div class="">
-    <img src="images/gallery/12.jpeg" alt="">
+    <img src="https://oakati.github.io/images/gallery/12.jpeg" alt="">
   </div>
     <div class="v-stretch">
-    <img src="images/gallery/13.jpeg" alt="">
+    <img src="https://oakati.github.io/images/gallery/13.jpeg" alt="">
   </div>
     <div class="big-stretch">
-    <img src="images/gallery/14.jpeg" alt="">
+    <img src="https://oakati.github.io/images/gallery/14.jpeg" alt="">
   </div>
 </div>
     
