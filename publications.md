@@ -44,4 +44,3 @@ title: "Publications"
 </table>
 
 3. E. Cil, O. Tatar, O. A. Kati, Z. P. Yildirim and S. Dumanli, ["Techniques to The Development of Semi-solid Tissue Phantoms for Wearable and Implantable Antenna Measurements,"](https://ieeexplore.ieee.org/document/9302101) 2020 28th Signal Processing and Communications Applications Conference (SIU), 2020, pp. 1-4, doi: 10.1109/SIU49456.2020.9302101.
-4. 
