@@ -4,7 +4,7 @@ title: "Gallery"
 ---
 
 <head>
-  <link rel="stylesheet" type="text/css" href="css/image-grid.css">
+  <link rel="stylesheet" type="text/css" href="https://oakati.github.io/css/image-grid.css">
 </head>
 
 <!-- Google tag (gtag.js) -->
