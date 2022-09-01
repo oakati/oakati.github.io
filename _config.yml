@@ -20,7 +20,7 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "portfolio.md"}
   - {file: "publications.md"}
   - {file: "posts.md"}
-  - {file: "resources.md"}
+  - {file: "fav_links.md"}
   - {file: "contact.md"}
 
 
