@@ -19,8 +19,9 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "index.md"}
   - {file: "portfolio.md"}
   - {file: "publications.md"}
-  - {file: "posts.md"}
+#   - {file: "posts.md"}
   - {file: "fav_links.md"}
+  - {file: "gallery.md"}
   - {file: "contact.md"}
 
 
