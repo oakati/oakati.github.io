@@ -23,3 +23,9 @@
 .h-stretch{
    grid-column: span 2;
 }
+
+/**** stretch vertically and horizontally *****/
+.big-stretch{
+   grid-row: span 2;
+   grid-column: span 2;
+}
