@@ -42,7 +42,7 @@ title: "Resources"
     <tr>
       <td>EuCAP 2021 Poster Presentation</td>
       <td>
-       <div id='outerdiv' style="width:160px; overflow-x:hidden;">
+       <div id='outerdiv' style="width:240px; overflow-x:hidden;">
         <iframe width="240" height="135" src="https://www.youtube.com/embed/ivT4r4EqRKQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
        </div>
      </td>
@@ -50,7 +50,7 @@ title: "Resources"
     <tr>
       <td>A list of excerpts from FA 49D (Music and the Visual Arts)</td>
       <td>
-       <div id='outerdiv' style="width:160px; overflow-x:hidden;"> 
+       <div id='outerdiv' style="width:240px; overflow-x:hidden;"> 
         <iframe width="240" height="135" src="https://www.youtube.com/embed/videoseries?list=PLy_w9_hh-bC0twUliXaUUJExZqmtse6Pq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
        </div>
      </td>
