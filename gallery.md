@@ -61,7 +61,11 @@ title: "Gallery"
     <img src="https://oakati.github.io/images/gallery/14.jpeg" alt="">
   </div>
 </div>
-    
+  <table width="760" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+      <td height="15" valign="bottom" class="footer" style="padding-top:00px">all images are copyright protected &copy; ömer alperen katı</td>
+    </tr>
+  </table>    
 
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-630f7195c9e75384"></script>
