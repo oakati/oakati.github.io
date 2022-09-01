@@ -34,6 +34,20 @@ title: "Publications"
 2. C. Cadir, O. A. Kati and S. Dumanli, [Matching Medium Design for In-Body Communications Using Artificial Neural Networks,"](https://ieeexplore.ieee.org/document/9411248) 2021 15th European Conference on Antennas and Propagation (EuCAP), 2021, pp. 1-5.
 <!-- % , doi: 10.23919/EuCAP51087.2021.9411248
  -->
+ 
+ <table>
+  <tbody>
+    <tr>
+      <td>EuCAP 2021 Poster Presentation</td>
+      <td>
+       <div id='outerdiv' style="width:320px; overflow-x:hidden;">
+        <iframe width="320" height="180" src="https://www.youtube.com/embed/ivT4r4EqRKQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </div>
+     </td>
+    </tr>
+  </tbody>
+</table>
+
 3. E. Cil, O. Tatar, O. A. Kati, Z. P. Yildirim and S. Dumanli, [Techniques to The Development of Semi-solid Tissue Phantoms for Wearable and Implantable Antenna Measurements,"](https://ieeexplore.ieee.org/document/9302101) 2020 28th Signal Processing and Communications Applications Conference (SIU), 2020, pp. 1-4.
 <!-- % , doi: 10.1109/SIU49456.2020.9302101
  -->
