@@ -4,6 +4,7 @@ title: "Gallery"
 ---
 
 <head>
+  <link rel="stylesheet" type="text/css" href="css/image-grid.css">
 </head>
 
 <!-- Google tag (gtag.js) -->
