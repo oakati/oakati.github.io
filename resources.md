@@ -39,6 +39,6 @@ title: "Resources"
 | A free web scraping tool | [ParseHub](https://www.parsehub.com/)
 | An application to measure the magnitudes of EM fields around you | [Ultimate EMF Detector](https://play.google.com/store/apps/details?id=com.mreprogramming.ultimateemfdetector&hl=tr&gl=US) 
 | A discord bot using AI to convert text to image | [Midjourney](https://www.midjourney.com/home/) 
-|EuCAP 2021 Poster Presentation | <video width="16" height="9" controls> <source src="https://www.youtube.com/embed/ivT4r4EqRKQ" type="video/academy"> </video> 
-|A list of excerpts from FA 49D (Music and the Visual Arts) | <video width="16" height="9" controls> <source src="https://www.youtube.com/embed/videoseries?list=PLy_w9_hh-bC0twUliXaUUJExZqmtse6Pq" type="video/art"> </video>
+|EuCAP 2021 Poster Presentation | <video width="160" height="90" controls> <source src="https://www.youtube.com/embed/ivT4r4EqRKQ" type="video/academy"> </video> 
+|A list of excerpts from FA 49D (Music and the Visual Arts) | <video width="160" height="90" controls> <source src="https://www.youtube.com/embed/videoseries?list=PLy_w9_hh-bC0twUliXaUUJExZqmtse6Pq" type="video/art"> </video>
 
