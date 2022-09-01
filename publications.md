@@ -34,7 +34,7 @@ title: "Publications"
   <tbody>
     <tr>
       <td>EuCAP 2021 Poster Presentation</td>
-      <td>
+      <td style="display: flex; align-items: center; align-content: center;">
        <div id='outerdiv' style="width:320px; overflow-x:hidden;">
         <iframe width="320" height="180" src="https://www.youtube.com/embed/ivT4r4EqRKQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
        </div>
