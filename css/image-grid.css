@@ -18,3 +18,8 @@
 .v-stretch{
    grid-row: span 2;
 }
+
+/**** stretch horizontally *****/
+.h-stretch{
+   grid-column: span 2;
+}
