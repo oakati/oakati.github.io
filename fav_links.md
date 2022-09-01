@@ -40,14 +40,6 @@ title: "Fav Links"
       <td><a href="https://www.midjourney.com/home/">Midjourney</a></td>
     </tr>
     <tr>
-      <td>EuCAP 2021 Poster Presentation</td>
-      <td>
-       <div id='outerdiv' style="width:320px; overflow-x:hidden;">
-        <iframe width="320" height="180" src="https://www.youtube.com/embed/ivT4r4EqRKQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-       </div>
-     </td>
-    </tr>
-    <tr>
       <td>A list of excerpts from FA 49D (Music and the Visual Arts)</td>
       <td>
        <div id='outerdiv' style="width:320px; overflow-x:hidden;"> 
