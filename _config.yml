@@ -21,7 +21,7 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "publications.md"}
 #   - {file: "posts.md"}
   - {file: "fav_links.md"}
-  - {file: "gallery.md"}
+#   - {file: "gallery.md"}
   - {file: "contact.md"}
 
 
