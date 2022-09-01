@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "About me"
+title: "Ömer Alperen Katı"
 ---
 
 <!-- {% raw %}{% seo %}{% endraw %}
