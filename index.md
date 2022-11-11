@@ -36,6 +36,8 @@ I was with [Antennas and Propagation Research Laboratory (BOUNtenna)](https://bo
 
 I was with [Poilabs](https://www.poilabs.com/en/home/), as an embedded software developer intern during Summer 2022. My current research interests include communication systems and embedded software development.
 
+<a href="https://info.flagcounter.com/Y8CZ"><img src="https://s11.flagcounter.com/count2/Y8CZ/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-630f7195c9e75384"></script>
 
