@@ -7,6 +7,7 @@ title: "About me"
  -->
 
 <head>
+  <meta name="google-site-verification" content="H1AZP3oXg9hd_yY267zGF4Di-29--4f4UVwzpmSY-PU" />
   <meta http-equiv='cache-control' content='no-cache'> 
   <meta http-equiv='expires' content='0'> 
   <meta http-equiv='pragma' content='no-cache'>
