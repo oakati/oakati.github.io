@@ -31,15 +31,11 @@ title: "About me"
   gtag('config', 'G-TTC6RSBSSV');
 </script>
 
-<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-
 ![Me](https://scholar.googleusercontent.com/citations?view_op=view_photo&user=Ae0LSsUAAAAJ&citpid=3){:style="display: block;margin-left: auto;margin-right: auto;float: right;"}I graduated from B.Sc. in [Electrical and Electronics Engineering](https://ee.boun.edu.tr/) at [Boğaziçi Üniversitesi](http://www.boun.edu.tr/en-US/Index), İstanbul, Türkiye. I was an Erasmus student at [Politechnika Poznańska (PUT)](https://www.put.poznan.pl/en), Poznań, Poland, in Spring 2021. 
 
 I was with [Antennas and Propagation Research Laboratory (BOUNtenna)](https://bountenna.boun.edu.tr/), İstanbul, Türkiye, as an Undergraduate Research Assistant from July 2019 to March 2022. Also, I did two internships at [Turkcell](https://www.turkcell.com.tr/english-support) and [ASELSAN](https://aselsan.com.tr/en) during the summers of 2020 and 2021, respectively.
 
 I was with [Poilabs](https://www.poilabs.com/en/home/), as an embedded software developer intern during Summer 2022. My current research interests include communication systems and embedded software development.
-
-<div class="badge-base LI-profile-badge" data-locale="tr_TR" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="okati" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://tr.linkedin.com/in/okati?trk=profile-badge">Ömer Alperen Katı</a></div>
 
 <a href="https://info.flagcounter.com/Y8CZ"><img src="https://s11.flagcounter.com/count2/Y8CZ/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
 
