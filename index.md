@@ -35,7 +35,7 @@ title: "About me"
 
 I was with [Antennas and Propagation Research Laboratory (BOUNtenna)](https://bountenna.boun.edu.tr/), İstanbul, Türkiye, as an Undergraduate Research Assistant from July 2019 to March 2022. Also, I did two internships at [Turkcell](https://www.turkcell.com.tr/english-support) and [ASELSAN](https://aselsan.com.tr/en) during the summers of 2020 and 2021, respectively.
 
-I was with [Poilabs](https://www.poilabs.com/en/home/), as an embedded software developer intern during Summer 2022. My current research interests include communication systems and embedded software development.
+I was with [Poilabs](https://www.poilabs.com/en/home/), as an embedded software developer intern during Summer 2022. I have been working as a software engineer at [Aselsan](https://www.aselsan.com/en) since March 2023. My current research interests include communication systems and embedded software development.
 
 <a href="https://info.flagcounter.com/Y8CZ"><img src="https://s11.flagcounter.com/count2/Y8CZ/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
 
