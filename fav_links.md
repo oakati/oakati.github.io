@@ -24,6 +24,18 @@ title: "Fav Links"
   </thead>
   <tbody>
     <tr>
+      <td>Ceedling is a build system for C projects that extends Ruby's Rake (make-ish) build system. Ceedling is primarily aimed at Test-Driven Development in C and is intended to bring together CMock, Unity, and CException.</td>
+      <td><a href="https://www.throwtheswitch.org/ceedling"></a>Ceedling</td>
+    </tr>
+    <tr>
+      <td>A great VS Code extension for Ceedling</td>
+      <td><a href="https://marketplace.visualstudio.com/items?itemName=numaru.vscode-ceedling-test-adapter"></a>Ceedling Test Explorer</td>
+    </tr>
+    <tr>
+      <td>Google AI Studio is a browser-based integrated development environment for generative model prototyping. Google AI Studio allows you to quickly test models and experiment with various prompts. When you've completed your project, you may export it to code in your preferred programming language using the Gemini API.</td>
+      <td><a href="https://ai.google.dev/gemini-api/docs/ai-studio-quickstart?authuser=1"></a>Google AI Studio</td>
+    </tr>
+    <!--<tr>
       <td>An application to scan and discover Bluetooth low energy (BLE) devices</td>
       <td><a href="https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&amp;hl=tr&amp;gl=US">nRF Connect</a></td>
     </tr>
@@ -46,6 +58,6 @@ title: "Fav Links"
         <iframe width="320" height="180" src="https://www.youtube.com/embed/videoseries?list=PLy_w9_hh-bC0twUliXaUUJExZqmtse6Pq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="false"></iframe>
        </div>
      </td>
-    </tr>
+    </tr>-->
   </tbody>
 </table>
