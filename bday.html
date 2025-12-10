@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">İyi ki Doğdun</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tone.js for background music -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+    <style>
+        /* Base Font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+            transition: background-color 1s ease-in-out, background-image 1s ease-in-out;
+        }
+
+        /* --- TEMA RENKLERİ VE PASTA STİLİ (İLK ŞIK VERSİYON) --- */
+        
+        /* Kış Teması (Noel Pazarı ve Karlı Gece) */
+        body.theme-winter { 
+            background-color: #0f172a;
+            background-image:
+                /* Zemin (Kar) */
+                radial-gradient(ellipse at 50% 100%, #e2e8f0 0%, #94a3b8 40%, transparent 40.1%),
+                
+                repeating-linear-gradient(45deg, #b91c1c 0, #b91c1c 10px, #fecaca 10px, #fecaca 20px),
+                
+                /* Noel Baba ve Geyikler (Ayın önünde silüet) */
+                radial-gradient(circle at 15% 20%, #fff 10%, transparent 10.2%), /* Ay */
+                /* Silüetler (Basit daireler/elipsler ile) */
+                radial-gradient(ellipse at 15% 20%, #0f172a 2%, transparent 2.2%), /* Kızak */
+                radial-gradient(circle at 12% 21%, #0f172a 0.5%, transparent 0.6%), /* Geyik 1 */
+                radial-gradient(circle at 10% 22%, #0f172a 0.5%, transparent 0.6%), /* Geyik 2 */
+                
+                /* Çam Ağaçları (Arka Plan) */
+                conic-gradient(from 150deg at 80% 60%, transparent 0deg, #064e3b 1deg, #064e3b 60deg, transparent 61deg),
+                conic-gradient(from 150deg at 90% 65%, transparent 0deg, #065f46 1deg, #065f46 60deg, transparent 61deg),
+                
+                /* Gökyüzü */
+                linear-gradient(to bottom, #020617 0%, #1e293b 100%);
+                
+            background-size: 
+                100% 100%, /* Zemin */
+                100px 60px, /* Çadır Deseni (Maskelenmeli ama basit tutuyoruz: Alt kısımda şerit) */
+                100% 100%, /* Ay */
+                100% 100%, /* Kızak */
+                100% 100%, /* Geyik 1 */
+                100% 100%, /* Geyik 2 */
+                100% 100%, /* Ağaç 1 */
+                100% 100%, /* Ağaç 2 */
+                100% 100%; /* Gökyüzü */
+            background-position: 
+                0 0, 
+                50% 90%, /* Çadır konumu */
+                0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+            background-repeat: no-repeat;
+        }
+        /* Çadırın şeklini düzeltmek için maskeleme yerine basit bir blok ekleyelim */
+        body.theme-winter::before {
+            content: '';
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 60px;
+            background: repeating-linear-gradient(90deg, #b91c1c 0, #b91c1c 15px, #f8fafc 15px, #f8fafc 30px);
+            clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+            z-index: 1;
+            opacity: 0; /* Varsayılan gizli */
+        }
+        body.theme-winter.theme-winter::before { opacity: 1; } /* Sadece kış modunda göster */
+
+        .theme-winter .candle-body { background: linear-gradient(to top, #F59E0B, #eab308); } /* Altın Mum */
+        .theme-winter .cake-icing-color { background-color: #B91C1C; } /* Kırmızı Krema */
+        
+        /* İlkbahar Teması (Masmavi Gökyüzü ve Bulutlar) */
+        body.theme-spring { 
+            background-color: #60A5FA; 
+            background-image:
+                /* Bulutlar (Yumuşak ve Dağınık) */
+                radial-gradient(circle at 15% 15%, rgba(255,255,255,0.9) 0%, transparent 15%),
+                radial-gradient(circle at 25% 20%, rgba(255,255,255,0.7) 0%, transparent 12%),
+                radial-gradient(circle at 60% 10%, rgba(255,255,255,0.8) 0%, transparent 18%),
+                radial-gradient(circle at 85% 25%, rgba(255,255,255,0.9) 0%, transparent 15%),
+                /* Gökyüzü Gradyanı (Derin Mavi -> Açık Mavi) */
+                linear-gradient(to bottom, #2563EB 0%, #93C5FD 100%);
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+        .theme-spring .candle-body { background: linear-gradient(to top, #FEF08A, #FDE68A); }
+        .theme-spring .cake-icing-color { background-color: #34D399; } /* Bahar Yeşili Krema */
+        
+        /* Yaz Teması (Kumsal Zeminli) */
+        body.theme-summer {
+            background-color: #87CEEB; /* Açık Mavi Gökyüzü */
+            background-image: 
+                /* Güneş */
+                radial-gradient(circle at 20% 20%, #FDB813 0%, #FDB813 12%, rgba(253, 184, 19, 0.5) 18%, transparent 20%),
+                
+                /* Bulutlar */
+                radial-gradient(circle at 70% 15%, rgba(255,255,255,0.8) 0%, transparent 10%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.6) 0%, transparent 8%),
+
+                /* Kum (En Alt 120px - Boydan Boya) */
+                linear-gradient(to top, #F4A460 0%, #e6c288 120px, transparent 120px),
+
+                /* Deniz (Kumun arkasında) */
+                linear-gradient(to top, #006994 0%, #0077be 300px, transparent 300px);
+            
+            background-size: 100% 100%;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .theme-summer .candle-body { background: linear-gradient(to top, #FF7F50, #FF6347); }
+        .theme-summer .cake-icing-color { background-color: #FF5733; } /* Turuncu/Kızıl Krema */
+
+        /* Sonbahar Teması (Hüzünlü ve Yoğun) */
+        body.theme-autumn { 
+            background-color: #2d2424; 
+            background-image:
+                /* Islak Zemin Yansıması */
+                linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 25%),
+                
+                /* Çıplak Ağaçlar (Silüetler) */
+                conic-gradient(from 175deg at 10% 100%, #1a1212 0deg, #1a1212 10deg, transparent 10.1deg, transparent 350deg, #1a1212 350deg),
+                conic-gradient(from 175deg at 90% 100%, #1a1212 0deg, #1a1212 10deg, transparent 10.1deg, transparent 350deg, #1a1212 350deg),
+                
+                /* Sis ve Pus */
+                linear-gradient(to top, rgba(100, 100, 100, 0.1) 0%, transparent 50%),
+                
+                /* Kasvetli Gökyüzü (Gün Batımı Sonrası) */
+                linear-gradient(to bottom, #1f1a1d 0%, #3d2e33 50%, #5c4033 100%);
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+        .theme-autumn .candle-body { background: linear-gradient(to top, #5D4037, #3E2723); } /* Koyu Kahve Mum */
+        .theme-autumn .cake-icing-color { background-color: #8D6E63; } /* Soluk Kahve Krema */
+
+
+        /* --- CSS MÜHENDİSLİĞİ: Geri Alınan PASTA VE MUMLAR --- */
+        
+        .cake-base {
+            width: 300px; 
+            height: 100px; 
+            position: relative;
+            z-index: 10;
+            margin-top: 40px;
+            /* Wrapper only */
+        }
+
+        /* Pasta Tabağı - Ayrı Element */
+        .plate {
+            position: absolute;
+            bottom: -15px;
+            left: -25px;
+            width: 350px;
+            height: 40px;
+            background: #fff;
+            border-radius: 50%;
+            z-index: 1; /* Pastanın altında */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border: 4px solid #ddd;
+        }
+
+        /* Pasta Gövdesi */
+        .cake-body-layer {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border-radius: 0 0 50% 50% / 0 0 20px 20px;
+            z-index: 5;
+            
+            /* Sponge + Çikolata Parçacıkları */
+            background-color: #f3e5ab;
+            background-image: 
+                radial-gradient(circle, #3e2723 2px, transparent 2.5px),
+                linear-gradient(to right, #f3e5ab, #e6c880, #f3e5ab);
+            background-size: 25px 25px, 100% 100%;
+            background-position: 0 0, 0 0;
+            
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.5), 
+                inset 0 -10px 20px rgba(0, 0, 0, 0.1); 
+        }
+
+        /* --- ÜST KREMA VE MUMLARIN YERLEŞİMİ --- */
+        
+        /* 1. Mumların Oturduğu Beyaz Platform (Yeni Platform) */
+        .cake-top-platform {
+            position: absolute;
+            width: 300px; 
+            height: 60px;
+            top: -30px;
+            left: 0;
+            z-index: 30; 
+            
+            background: #f7f7f7; /* Varsayılan, JS ile değişebilir */
+            border-radius: 50%; 
+            
+            box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.1);
+            
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            padding: 0 40px; 
+        }
+        
+        /* 2. Damlayan Renkli Krema Katmanı */
+        .cake-top {
+            width: 304px; /* Base'den biraz geniş */
+            height: 50px; 
+            position: absolute;
+            top: -32px; 
+            left: -2px;
+            z-index: 20; 
+            
+            border-radius: 50%; /* Üstü yuvarlak */
+            background: transparent;
+        }
+        
+        /* Tema Rengi Uygulaması */
+        .cake-icing-color {
+            position: absolute; width: 100%; height: 100%; top: 0; left: 0;
+            border-radius: 50%; /* Üst yüzey */
+            opacity: 1;
+            z-index: 1;
+        }
+        
+        /* Drips */
+        .cake-icing-color::after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background: inherit;
+            border-radius: 20px;
+            mask-image: radial-gradient(20px at 20px 0px, transparent 20px, black 21px);
+            mask-size: 40px 40px;
+            mask-repeat: repeat-x;
+            mask-position: 0 -20px;
+            -webkit-mask-image: radial-gradient(20px at 20px 0px, transparent 20px, black 21px);
+            -webkit-mask-size: 40px 40px;
+            -webkit-mask-repeat: repeat-x;
+            -webkit-mask-position: 0 -20px;
+            transform: scaleY(-1); /* Ters çevirip damla yap */
+            opacity: 0.9;
+        }
+
+
+        /* Mum Gövdesi Stili */
+        .candle-body {
+            width: 16px; 
+            height: 50px; /* Kısaltıldı */
+            border-radius: 3px;
+            position: relative;
+            z-index: 20;
+
+            box-shadow: 
+                inset -5px 0 5px rgba(0, 0, 0, 0.1), 
+                2px 2px 5px rgba(0,0,0,0.2);
+            border: none; 
+        }
+
+        .candle-wrapper {
+            position: relative;
+            top: -15px; /* Platforma göre Y pozisyonu */
+            margin: 0 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* --- EFECT VE DİĞER STİLLER --- (Aynı kaldı) */
+
+        .weather-effect-container {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 50; overflow: hidden;
+        }
+        
+        .rain-drop {
+            position: absolute; width: 2px; height: 15px; background: rgba(100, 149, 237, 0.6); 
+            transform: skewX(20deg); animation-name: rain-fall-fixed; animation-timing-function: linear; animation-iteration-count: infinite;
+        }
+        @keyframes rain-fall-fixed {
+            0% { transform: translate(0, 0) skewX(20deg); } 
+            100% { transform: translate(-150vw, 150vh) skewX(20deg); }
+        }
+
+        .leaf {
+            position: absolute; width: 20px; height: 20px; background: #d35400; 
+            border-radius: 20px 0; opacity: 0; animation: wind-blow linear infinite;
+        }
+        .leaf:nth-child(2n) { background: #e67e22; width: 15px; height: 15px; }
+        .leaf:nth-child(3n) { background: #c0392b; width: 25px; height: 25px; }
+
+        @keyframes wind-blow {
+            0% { transform: translate(-20vw, -10vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translate(120vw, 40vh) rotate(720deg); opacity: 0; }
+        }
+
+        .pollen {
+            position: absolute; width: 12px; height: 12px; 
+            background: radial-gradient(circle, #fff 20%, #fbbf24 100%);
+            border-radius: 50%; 
+            box-shadow: 0 0 8px rgba(251, 191, 36, 0.9);
+            opacity: 0; 
+            z-index: 100; /* Görünürlük için öne alındı */
+            pointer-events: none;
+        }
+        /* Rastgele Yönler İçin Animasyonlar (Daha yavaş ve belirgin) */
+        @keyframes float-random-1 {
+            0% { transform: translate(0, 0) scale(0.5); opacity: 0; }
+            10% { opacity: 1; } 90% { opacity: 1; }
+            100% { transform: translate(50vw, -50vh) scale(1.2); opacity: 0; }
+        }
+        @keyframes float-random-2 {
+            0% { transform: translate(0, 0) scale(0.5); opacity: 0; }
+            10% { opacity: 1; } 90% { opacity: 1; }
+            100% { transform: translate(-50vw, 50vh) scale(1.2); opacity: 0; }
+        }
+        @keyframes float-random-3 {
+            0% { transform: translate(0, 0) scale(0.5); opacity: 0; }
+            10% { opacity: 1; } 90% { opacity: 1; }
+            100% { transform: translate(60vw, 20vh) scale(1.2); opacity: 0; }
+        }
+        @keyframes float-random-4 {
+            0% { transform: translate(0, 0) scale(0.5); opacity: 0; }
+            10% { opacity: 1; } 90% { opacity: 1; }
+            100% { transform: translate(-60vw, -20vh) scale(1.2); opacity: 0; }
+        }
+        
+        .snowflake {
+            position: absolute; 
+            color: rgba(255, 255, 255, 0.9); 
+            font-size: 24px; /* Kristal boyutu */
+            background: transparent; 
+            animation-timing-function: linear; animation-iteration-count: infinite;
+            user-select: none;
+        }
+        .snowflake::after { content: '❄'; }
+        @keyframes fall-straight { 0% { transform: translate(0, 0); } 100% { transform: translate(0, 150vh); } }
+        @keyframes fall-right { 0% { transform: translate(0, 0); } 100% { transform: translate(75vw, 150vh); } }
+        @keyframes fall-left { 0% { transform: translate(0, 0); } 100% { transform: translate(-75vw, 150vh); } }
+
+
+        /* Alev ve Sönme */
+        .flame {
+            width: 12px; height: 25px; background: radial-gradient(circle at 50% 10%, #fff 0%, #ffeb3b 20%, #ff9800 60%, transparent 100%);
+            border-radius: 50% 50% 30% 30%; filter: drop-shadow(0 0 5px #ffcc00) drop-shadow(0 0 10px #ff9800);
+            position: absolute; top: -20px; animation: flicker 0.1s infinite alternate; 
+            transform-origin: bottom; transition: opacity 0.5s ease-in-out, transform 0.5s; 
+            will-change: opacity, transform; cursor: pointer; 
+            z-index: 31; 
+        }
+        .flame.off { opacity: 0 !important; transform: scale(0.5) translateY(10px); filter: none; animation: none; pointer-events: none; }
+        @keyframes flicker {
+            0% { transform: scaleY(1.0) translateX(0px); opacity: 1; }
+            50% { transform: scaleY(0.95) translateX(0.5px); opacity: 0.95; }
+            100% { transform: scaleY(1.05) translateX(-0.5px); opacity: 1; }
+        }
+
+        /* Mum Tıklama İpucu (Hover) */
+        .flame:hover::after {
+            content: '🌬️'; /* Üfleme İkonu */
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            animation: tap-hint 0.8s ease-in-out infinite;
+            pointer-events: none; /* Tıklamayı engellemesin */
+            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        @keyframes tap-hint {
+            0% { transform: translateX(-50%) translateY(0) scale(1); opacity: 0.8; }
+            50% { transform: translateX(-50%) translateY(5px) scale(0.9); opacity: 1; }
+            100% { transform: translateX(-50%) translateY(0) scale(1); opacity: 0.8; }
+        }
+
+        .confetti-message { opacity: 0; transition: opacity 1s ease-in-out; }
+        .confetti-message.show { opacity: 1; }
+
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(5px); display: flex; align-items: center; justify-content: center; z-index: 100;
+        }
+
+        /* Mobil Cihazlar İçin Ayarlama - KALDIRILDI (Ölçeklendirme sistemi kullanılıyor) */
+        /* @media (max-width: 640px) {
+            .cake-base { width: 90vw; height: 120px; }
+            .candle-body { height: 90px; width: 20px; }
+            .flame { top: -15px; }
+        } */
+
+        /* Ölçeklenebilir Oyun Konteyneri */
+        #game-container {
+            width: 600px;
+            height: 900px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transform-origin: center center;
+        }
+
+        /* İlkbahar Çimen ve Çiçekler */
+        #spring-scenery {
+            position: fixed; bottom: 0; left: 0; width: 100%; height: 150px;
+            pointer-events: none; z-index: 5; display: none;
+        }
+        .grass {
+            position: absolute; bottom: -50px; left: -10%; width: 120%; height: 150px;
+            background: linear-gradient(to top, #22c55e, #4ade80); 
+            border-radius: 50% 50% 0 0;
+            box-shadow: inset 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .flower {
+            position: absolute; bottom: 60px;
+            width: 10px; height: 10px; 
+            background: #FCD34D; border-radius: 50%;
+            /* Eski Şekil: 4 Yaprak (Box Shadow ile) */
+            box-shadow: 0 -12px 0 #F472B6, 12px 0 0 #F472B6, 0 12px 0 #F472B6, -12px 0 0 #F472B6;
+            transform-origin: bottom center;
+            animation: sway 3s ease-in-out infinite alternate;
+        }
+        /* Çiçek Çeşitliliği (Renkler ve Konumlar Korundu, Şekil Eskiye Döndü) */
+        .flower:nth-child(2n) { 
+            box-shadow: 0 -12px 0 #A78BFA, 12px 0 0 #A78BFA, 0 12px 0 #A78BFA, -12px 0 0 #A78BFA; 
+            animation-delay: 0.5s; 
+        }
+        .flower:nth-child(3n) { 
+            bottom: 70px; 
+            box-shadow: 0 -12px 0 #F87171, 12px 0 0 #F87171, 0 12px 0 #F87171, -12px 0 0 #F87171; 
+            animation-delay: 1s; 
+        }
+        .flower:nth-child(4n) { 
+            bottom: 50px; 
+            box-shadow: 0 -12px 0 #60A5FA, 12px 0 0 #60A5FA, 0 12px 0 #60A5FA, -12px 0 0 #60A5FA; 
+            animation-delay: 1.5s; 
+        }
+        .flower:nth-child(5n) { 
+            bottom: 80px; 
+            box-shadow: 0 -12px 0 #F472B6, 12px 0 0 #F472B6, 0 12px 0 #F472B6, -12px 0 0 #F472B6; 
+            animation-delay: 0.2s; 
+        }
+
+        @keyframes sway {
+            0% { transform: rotate(-5deg); }
+            100% { transform: rotate(5deg); }
+        }
+
+        /* Plaj Topu */
+        .beach-ball {
+            position: fixed;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            /* Klasik Plaj Topu Renkleri */
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.8) 5%, transparent 15%),
+                        conic-gradient(
+                            #ef4444 0deg 60deg,    /* Kırmızı */
+                            #fbbf24 60deg 120deg,  /* Sarı */
+                            #3b82f6 120deg 180deg, /* Mavi */
+                            #ef4444 180deg 240deg, 
+                            #fbbf24 240deg 300deg, 
+                            #3b82f6 300deg 360deg
+                        );
+            box-shadow: inset -15px -15px 30px rgba(0,0,0,0.2), 10px 20px 30px rgba(0,0,0,0.3);
+            z-index: 200;
+            cursor: grab;
+            display: none;
+            touch-action: none;
+            user-select: none;
+        }
+        .beach-ball:active { cursor: grabbing; }
+        /* Topun ortasındaki beyaz daire */
+        .beach-ball::after {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto;
+            width: 20px; height: 20px; background: white; border-radius: 50%;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="theme-winter">
+
+    <!-- Hava Durumu Efekti Konteynerleri -->
+    <div id="weather-container">
+        <div id="snow-container" class="weather-effect-container"></div>
+        <div id="rain-container" class="weather-effect-container"></div>
+        <div id="pollen-container" class="weather-effect-container"></div>
+    </div>
+
+    <!-- İlkbahar Manzarası -->
+    <div id="spring-scenery">
+        <div class="grass"></div>
+        <!-- Çiçekler (3 Katına Çıkarıldı) -->
+        <div class="flower" style="left: 5%; bottom: 75px;"></div>
+        <div class="flower" style="left: 10%; bottom: 85px;"></div>
+        <div class="flower" style="left: 15%; bottom: 65px;"></div>
+        <div class="flower" style="left: 20%; bottom: 90px; transform: scale(0.8);"></div>
+        <div class="flower" style="left: 25%; bottom: 70px;"></div>
+        <div class="flower" style="left: 35%; bottom: 80px;"></div>
+        <div class="flower" style="left: 45%; bottom: 60px;"></div>
+        <div class="flower" style="left: 50%; bottom: 60px; transform: scale(0.9);"></div>
+        <div class="flower" style="left: 60%; bottom: 85px;"></div>
+        <div class="flower" style="left: 70%; bottom: 75px;"></div>
+        <div class="flower" style="left: 80%; bottom: 70px; transform: scale(1.1);"></div>
+        <div class="flower" style="left: 90%; bottom: 80px;"></div>
+    </div>
+
+    <!-- Plaj Topu -->
+    <div id="beach-ball" class="beach-ball"></div>
+
+    <!-- İsim Girişi Modal (KALDIRILDI) -->
+    <!-- 
+    <div id="name-modal" class="modal-overlay"> ... </div> 
+    -->
+
+    <!-- Ana Uygulama İçeriği -->
+    <div id="game-container" class="relative z-40">
+        
+        <!-- Üst Kontrol Paneli -->
+        <div class="flex space-x-4 mb-4 z-50">
+            <!-- Dil Değiştirme Butonu -->
+            <button id="lang-toggle" 
+                    class="p-2 bg-white text-red-600 rounded-full text-sm font-semibold shadow-lg hover:bg-gray-100 transition">
+                English
+            </button>
+            
+            <!-- Tema Seçim Kutusu (KALDIRILDI - Otomatik Tarih Bazlı) -->
+        </div>
+
+        <!-- Başlık Mesajı -->
+        <div class="bg-white p-4 rounded-xl shadow-xl text-center mb-6 border-4 border-red-600">
+            <h1 id="main-greeting" class="text-4xl md:text-6xl font-extrabold text-green-700 mb-2">
+                İYİ Kİ DOĞDUN!
+            </h1>
+            <p id="age-info" class="text-xl text-red-600 font-bold"></p>
+        </div>
+
+        <p id="instruction-text" class="text-xl text-white mb-8 text-center font-semibold bg-red-600 p-2 rounded-lg shadow-md">
+            Mumları üfleyin VEYA üzerine dokunun!
+        </p>
+
+        <!-- Pasta ve Mum Alanı -->
+        <div class="cake-base relative">
+            
+            <!-- Tabak (En altta) -->
+            <div class="plate"></div>
+
+            <!-- Pasta Gövdesi (Çikolata Parçacıklı) -->
+            <div class="cake-body-layer"></div>
+
+            <!-- Mumların Oturduğu Platform -->
+            <div class="cake-top-platform">
+                <div id="candles-container" class="flex justify-center w-full h-full items-end">
+                    <!-- Mumlar JavaScript ile buraya eklenecek -->
+                </div>
+            </div>
+
+            <!-- Krema Dökülme Katmanı -->
+            <div class="cake-top">
+                 <!-- Tema rengi bu div'e uygulanır -->
+                <div class="cake-icing-color"></div>
+            </div>
+        </div>
+
+        <!-- Mikrofon Gürültü Seviyesi Göstergesi -->
+        <div class="w-full max-w-sm mt-10">
+            <div id="noise-label" class="text-center text-white mb-2 font-bold">Gürültü Seviyesi (Eşik: 10):</div>
+            <div class="bg-gray-700 h-6 rounded-full overflow-hidden shadow-inner border border-gray-500">
+                <div id="noise-level-bar" class="h-full bg-green-500 transition-all duration-100 ease-linear" style="width: 0%;"></div>
+            </div>
+        </div>
+
+        <!-- Başarı Mesajı -->
+        <div id="success-message" class="confetti-message mt-12 p-5 bg-white rounded-lg shadow-2xl border-4 border-green-700 max-w-lg mx-auto text-center z-40">
+            <h2 id="success-title" class="text-3xl font-bold text-red-700">MUMLAR SÖNDÜ! 🎉</h2>
+            <p id="success-text-name" class="text-lg font-semibold text-green-800 mt-2"></p>
+            <p id="success-text-message" class="text-md text-gray-700 italic mt-1 mb-4"></p>
+            <button id="reset-button" class="py-2 px-6 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition shadow-md">
+                Mumları Tekrar Yak / Yeniden Başlat
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // --- Sabitler ve Ayarlar ---
+        const NUM_CANDLES = 4;
+        const BLOW_THRESHOLD = 50; 
+        const CURRENT_YEAR = new Date().getFullYear();
+        const WINTER_SNOW_COUNT = 180; 
+        const RAIN_SPAWN_INTERVAL = 8000; 
+        const RAIN_BATCH_SIZE = 80; 
+        const SNOW_FALL_DURATION = 15; 
+        const SPRING_POLLEN_COUNT = 270; // Polen miktarı 3 katına çıkarıldı (90)
+        
+        let currentLang = 'tr';
+        let currentTheme = 'winter';
+        // Hardcoded Bilgiler
+        let personName = 'Canım Arkadaşım'; 
+        let birthYear = 1995; 
+        let customMessage = 'Doğum günün kutlu olsun! Nice mutlu, sağlıklı ve huzurlu yaşlara. İyi ki doğdun!'; 
+        let allCandlesOut = false;
+        
+        let audioContext, analyser, microphone, dataArray;
+        let candleFlames = [];
+        let loop;
+        let candlesOutCount = 0;
+        let rainSpawnInterval; 
+
+        // Plaj Topu Değişkenleri
+        const beachBall = document.getElementById('beach-ball');
+        let ballX = 100, ballY = 100;
+        let ballVX = 3, ballVY = 3;
+        let ballAnimationId;
+        let ballDirection = 1;
+        let isBallWaiting = false;
+
+        // Kar taneleri için basit yönler
+        const snowAnglesMap = [
+            { animation: 'fall-straight' },
+            { animation: 'fall-right' },
+            { animation: 'fall-left' }
+        ];
+
+        // Polenler için rastgele yönler
+        const pollenAnglesMap = [
+            { animation: 'float-random-1' },
+            { animation: 'float-random-2' },
+            { animation: 'float-random-3' },
+            { animation: 'float-random-4' }
+        ];
+
+        // Yağmur için sabit yön
+        const rainFixedAngle = { animation: 'rain-fall-fixed' };
+
+        // --- Çeviriler (Aynı) ---
+        const translations = {
+            tr: {
+                pageTitle: "İyi ki Doğdun",
+                modalTitle: "Kişisel Bilgileri Girin",
+                modalNamePlaceholder: "Doğum Günü Sahibi Adı (Örn: Ayşe)",
+                modalYearPlaceholder: "Doğum Yılı (Örn: 1980)",
+                modalMessagePlaceholder: "Özel Doğum Günü Mesajı (Örn: Nice mutlu yaşlara!)",
+                modalButton: "Başlat",
+                mainGreeting: "İYİ Kİ DOĞDUN {NAME}!",
+                ageInfo: "{AGE} Yaşın Kutlu Olsun!",
+                instruction: "Mumları üfleyin VEYA üzerine dokunun!",
+                noiseLabel: "Gürültü Seviyesi (Eşik: 50):",
+                successTitle: "MUMLAR SÖNDÜ! 🎉",
+                successTextName: "Mutlu yıllar, sevgili {NAME}.",
+                successTextMessage: "{MESSAGE}",
+                resetButton: "Mumları Tekrar Yak / Yeniden Başlat",
+                langToggle: "English",
+                optWinter: "Kış (Karlı)",
+                optSpring: "İlkbahar (Polen)",
+                optSummer: "Yaz (Plaj)",
+                optAutumn: "Sonbahar (Yağmur)"
+            },
+            en: {
+                pageTitle: "Happy Birthday",
+                modalTitle: "Enter Personal Details",
+                modalNamePlaceholder: "Birthday Person's Name (E.g: John)",
+                modalYearPlaceholder: "Birth Year (E.g: 1980)",
+                modalMessagePlaceholder: "Special Birthday Message (E.g: Wish you all the best!)",
+                modalButton: "Start",
+                mainGreeting: "HAPPY BIRTHDAY {NAME}!",
+                ageInfo: "Celebrating {AGE} Years!",
+                instruction: "Blow out the candles OR tap on them!",
+                noiseLabel: "Noise Level (Threshold: 50):",
+                successTitle: "CANDLES BLOWN OUT! 🎉",
+                successTextName: "Happy birthday, dear {NAME}.",
+                successTextMessage: "{MESSAGE}",
+                resetButton: "Relight Candles / Restart",
+                langToggle: "Türkçe",
+                optWinter: "Winter (Snowy)",
+                optSpring: "Spring (Pollen)",
+                optSummer: "Summer (Beach)",
+                optAutumn: "Autumn (Rainy)"
+            }
+        };
+
+        // --- DOM Elementleri ---
+        const pageTitle = document.getElementById('page-title');
+        const modalTitle = document.getElementById('modal-title');
+        const modalNameInput = document.getElementById('person-name-input');
+        const modalYearInput = document.getElementById('birth-year-input');
+        const modalMessageInput = document.getElementById('message-input');
+        const modalButton = document.getElementById('modal-button');
+        const langToggle = document.getElementById('lang-toggle');
+        // const themeSelector = document.getElementById('theme-selector'); // KALDIRILDI
+        const mainGreeting = document.getElementById('main-greeting');
+        const ageInfo = document.getElementById('age-info');
+        const instructionText = document.getElementById('instruction-text');
+        const noiseLabel = document.getElementById('noise-label');
+        const noiseLevelBar = document.getElementById('noise-level-bar');
+        const successTitle = document.getElementById('success-title');
+        const successTextName = document.getElementById('success-text-name');
+        const successTextMessage = document.getElementById('success-text-message');
+        const resetButton = document.getElementById('reset-button');
+        const candlesContainer = document.getElementById('candles-container');
+        const successMessage = document.getElementById('success-message');
+        const nameModal = document.getElementById('name-modal');
+        const nameForm = document.getElementById('name-form');
+        const snowContainer = document.getElementById('snow-container');
+        const rainContainer = document.getElementById('rain-container');
+        const pollenContainer = document.getElementById('pollen-container');
+
+
+        // --- Fonksiyonlar ---
+
+        /**
+         * Arayüzdeki tüm metinleri seçili dile ve girilen bilgilere göre günceller.
+         */
+        function updateText(lang) {
+            const t = translations[lang];
+            
+            const age = CURRENT_YEAR - birthYear;
+            const ageDisplay = isNaN(age) || age < 0 ? '?' : age;
+            
+            // Modal elementleri kaldırıldığı için bu satırlar iptal edildi
+            // modalTitle.textContent = t.modalTitle;
+            // modalNameInput.placeholder = t.modalNamePlaceholder;
+            // modalYearInput.placeholder = t.modalYearPlaceholder;
+            // modalMessageInput.placeholder = t.modalMessagePlaceholder;
+            // modalButton.textContent = t.modalButton;
+
+            pageTitle.textContent = t.pageTitle;
+            langToggle.textContent = t.langToggle;
+            mainGreeting.textContent = t.mainGreeting.replace("{NAME}", personName);
+            ageInfo.textContent = t.ageInfo.replace("{AGE}", ageDisplay);
+            instructionText.textContent = t.instruction;
+            noiseLabel.textContent = t.noiseLabel;
+            resetButton.textContent = t.resetButton;
+
+            // Tema seçenekleri kaldırıldığı için bu satırlar iptal edildi
+            // document.getElementById('opt-winter').textContent = t.optWinter;
+            // document.getElementById('opt-spring').textContent = t.optSpring;
+            // document.getElementById('opt-summer').textContent = t.optSummer;
+            // document.getElementById('opt-autumn').textContent = t.optAutumn;
+
+            successTitle.textContent = t.successTitle;
+            successTextName.textContent = t.successTextName.replace("{NAME}", personName);
+            successTextMessage.textContent = t.successTextMessage.replace("{MESSAGE}", customMessage);
+            
+            // themeSelector.value = currentTheme; // KALDIRILDI
+        }
+        
+        /**
+         * Mevsimi günün tarihine göre belirler.
+         */
+        function getInitialTheme() {
+            const month = new Date().getMonth() + 1; 
+            
+            if (month >= 3 && month <= 5) return 'spring'; 
+            if (month >= 6 && month <= 8) return 'summer'; 
+            if (month >= 9 && month <= 11) return 'autumn'; 
+            return 'winter'; 
+        }
+
+        /**
+         * Hava durumu efektlerini temizler ve seçilen temaya uygun olanı başlatır.
+         */
+        function applyTheme(theme) {
+            document.body.className = '';
+            document.body.classList.add(`theme-${theme}`);
+            currentTheme = theme;
+            // themeSelector.value = theme; // KALDIRILDI
+
+            // Tüm interval'i durdur
+            if (rainSpawnInterval) {
+                clearTimeout(rainSpawnInterval);
+            }
+
+            // Konteynerleri temizle
+            snowContainer.style.display = 'none';
+            rainContainer.style.display = 'none';
+            pollenContainer.style.display = 'none';
+            document.getElementById('spring-scenery').style.display = 'none';
+            beachBall.style.display = 'none'; // Topu gizle
+            if(ballAnimationId) cancelAnimationFrame(ballAnimationId);
+
+            rainContainer.innerHTML = ''; 
+            pollenContainer.innerHTML = ''; 
+            snowContainer.innerHTML = ''; 
+            
+            // Tema efektlerini uygula
+            if (theme === 'winter') {
+                snowContainer.style.display = 'block';
+                // Kar (Tipi/Rastgele Yön, Sabit Hız)
+                createParticleEffect(snowContainer, WINTER_SNOW_COUNT, 'snowflake', 20, true, true); 
+            } else if (theme === 'spring') {
+                pollenContainer.style.display = 'block'; // Yağmur yerine polen
+                document.getElementById('spring-scenery').style.display = 'block'; // Göster
+                // Polen (Rastgele Yön)
+                createParticleEffect(pollenContainer, SPRING_POLLEN_COUNT, 'pollen', 15, true, true); 
+            } else if (theme === 'summer') {
+                beachBall.style.display = 'block';
+                initBeachBall();
+            } else if (theme === 'autumn') {
+                pollenContainer.style.display = 'block';
+                // Rüzgar (Sonbahar Yaprakları)
+                createParticleEffect(pollenContainer, 400, 'leaf', 10, false, false); 
+            }
+        }
+        
+        /**
+         * Plaj Topu Mantığı
+         */
+        function initBeachBall() {
+            isBallWaiting = false;
+            // İlk başlangıç: Soldan girsin
+            resetBallPosition(true);
+            updateBall();
+        }
+
+        function resetBallPosition(fromLeft) {
+            const ballSize = 120;
+            // Başlangıç Y konumu: Ekranın alt yarısından fırlatılsın
+            ballY = window.innerHeight - 150 - Math.random() * 200; 
+
+            if (fromLeft) {
+                ballX = -ballSize - 10;
+                ballDirection = 1;
+                // Sağa doğru fırlat
+                ballVX = 10 + Math.random() * 5; 
+            } else {
+                ballX = window.innerWidth + 10;
+                ballDirection = -1;
+                // Sola doğru fırlat
+                ballVX = -(10 + Math.random() * 5);
+            }
+            
+            // Yukarı doğru fırlatma hızı (Negatif Y yukarıdır)
+            ballVY = -(15 + Math.random() * 10); 
+        }
+
+        function updateBall() {
+            if (currentTheme !== 'summer') return;
+
+            if (!isBallWaiting) {
+                // Fizik (Eğik Atış)
+                ballX += ballVX;
+                ballY += ballVY;
+                
+                // Yerçekimi
+                ballVY += 0.5;
+
+                // Sınır Kontrolü (Ekranın altına düştüyse veya yanlardan çok uzaklaştıysa)
+                const ballSize = 120;
+                const isOffScreenBottom = ballY > window.innerHeight + ballSize;
+                const isOffScreenRight = ballX > window.innerWidth + ballSize;
+                const isOffScreenLeft = ballX < -ballSize * 2;
+
+                if (isOffScreenBottom || isOffScreenRight || isOffScreenLeft) {
+                    isBallWaiting = true;
+                    // Bir sonraki atış ters yönden olsun
+                    const nextFromLeft = (ballDirection === -1); 
+                    setTimeout(() => { 
+                        resetBallPosition(nextFromLeft); 
+                        isBallWaiting = false; 
+                    }, 1000);
+                }
+            }
+            
+            beachBall.style.transform = `translate(${ballX}px, ${ballY}px) rotate(${ballX * 2}deg)`;
+            
+            ballAnimationId = requestAnimationFrame(updateBall);
+        }
+
+        /**
+         * Kar veya Polen efektlerini oluşturan jenerik fonksiyon.
+         */
+        function createParticleEffect(container, num, className, maxDelay, isWideStart, isRandomAngle) {
+            for (let i = 0; i < num; i++) {
+                const particle = document.createElement('div');
+                particle.className = className;
+                
+                // Genişletilmiş başlangıç alanı
+                particle.style.left = `${-150 + Math.random() * 250}vw`; 
+                particle.style.top = `${-150 + Math.random() * 150}vh`; 
+                
+                // Rastgele gecikme
+                particle.style.animationDelay = `${Math.random() * maxDelay}s`;
+                
+                if (className === 'snowflake') {
+                    // Kar: Sabit düşme hızı, rastgele yön
+                    particle.style.animationDuration = `${SNOW_FALL_DURATION}s`;
+                    
+                    if (isRandomAngle) {
+                        const randomAngle = snowAnglesMap[Math.floor(Math.random() * snowAnglesMap.length)];
+                        particle.style.animationName = randomAngle.animation;
+                    }
+                } else if (className === 'pollen') {
+                    // Polen: Sabit yön, rastgele hız
+                    particle.style.animationDuration = `${10 + Math.random() * 10}s`;
+                    
+                    if (isRandomAngle) {
+                        const randomAngle = pollenAnglesMap[Math.floor(Math.random() * pollenAnglesMap.length)];
+                        particle.style.animationName = randomAngle.animation;
+                    }
+                } else if (className === 'leaf') {
+                    // Yaprak: Rüzgar efekti
+                    particle.style.animationDuration = `${5 + Math.random() * 5}s`;
+                }
+                container.appendChild(particle);
+            }
+        }           
+        
+        /**
+         * Yağmur efektini oluşturan fonksiyon. (Sabit sağ çapraz yön)
+         */
+        function createRainEffect(container, num) {
+             for (let i = 0; i < num; i++) {
+                const drop = document.createElement('div');
+                drop.className = 'rain-drop';
+                
+                // Animasyon sabit yağmur yönüne ayarlandı
+                drop.style.animationName = rainFixedAngle.animation;
+
+                // Genişletilmiş başlangıç alanı
+                drop.style.left = `${-150 + Math.random() * 250}vw`; 
+                drop.style.top = `-${Math.random() * 150}vh`; 
+
+                // Rastgele hız
+                drop.style.animationDuration = `${0.5 + Math.random() * 0.5}s`;
+                drop.style.animationDelay = `${Math.random() * 5}s`;
+                container.appendChild(drop);
+            }
+            // Süreklilik için (Azaltılmış sıklık)
+            rainSpawnInterval = setTimeout(() => createRainEffect(container, num), RAIN_SPAWN_INTERVAL);
+        }
+
+
+        /**
+         * Arka plan müziğini Tone.js kullanarak başlatır.
+         */
+        function startMusic() {
+            // Önceki müziği temizle ve durdur
+            Tone.Transport.stop();
+            Tone.Transport.cancel();
+
+            const synth = new Tone.Synth().toDestination();
+            
+            // Happy Birthday Melodisi (Zamanlama: Bar:Beat:Sixteenth)
+            const melody = [
+                { time: "0:0:0", note: "G4", duration: "8n" },
+                { time: "0:0:2", note: "G4", duration: "8n" },
+                { time: "0:1:0", note: "A4", duration: "4n" },
+                { time: "0:2:0", note: "G4", duration: "4n" },
+                { time: "0:3:0", note: "C5", duration: "4n" },
+                { time: "1:0:0", note: "B4", duration: "2n" },
+                
+                { time: "1:2:0", note: "G4", duration: "8n" },
+                { time: "1:2:2", note: "G4", duration: "8n" },
+                { time: "1:3:0", note: "A4", duration: "4n" },
+                { time: "2:0:0", note: "G4", duration: "4n" },
+                { time: "2:1:0", note: "D5", duration: "4n" },
+                { time: "2:2:0", note: "C5", duration: "2n" },
+                
+                { time: "3:0:0", note: "G4", duration: "8n" },
+                { time: "3:0:2", note: "G4", duration: "8n" },
+                { time: "3:1:0", note: "G5", duration: "4n" },
+                { time: "3:2:0", note: "E5", duration: "4n" },
+                { time: "3:3:0", note: "C5", duration: "4n" },
+                { time: "4:0:0", note: "B4", duration: "4n" },
+                { time: "4:1:0", note: "A4", duration: "4n" },
+                
+                { time: "4:3:0", note: "F5", duration: "8n" },
+                { time: "4:3:2", note: "F5", duration: "8n" },
+                { time: "5:0:0", note: "E5", duration: "4n" },
+                { time: "5:1:0", note: "C5", duration: "4n" },
+                { time: "5:2:0", note: "D5", duration: "4n" },
+                { time: "5:3:0", note: "C5", duration: "2n" }
+            ];
+
+            const part = new Tone.Part((time, value) => {
+                synth.triggerAttackRelease(value.note, value.duration, time);
+            }, melody);
+
+            part.loop = true;
+            part.loopEnd = "6:0:0"; 
+            
+            part.start(0);
+            Tone.Transport.start();
+        }
+
+        /**
+         * Mumları HTML içine dinamik olarak yerleştirir ve alev dizisini doldurur.
+         */
+        function setupCandles() {
+            candlesContainer.innerHTML = ''; 
+            candleFlames = []; 
+            candlesOutCount = 0; 
+
+            for (let i = 0; i < NUM_CANDLES; i++) {
+                const candleWrapper = document.createElement('div');
+                candleWrapper.className = 'candle-wrapper';
+
+                const wick = document.createElement('div');
+                wick.className = 'candle-wick';
+
+                const flame = document.createElement('div');
+                flame.className = 'flame';
+                flame.id = `flame-${i}`;
+                
+                // Dokunmatik söndürme işlevi
+                flame.onclick = (e) => {
+                    e.stopPropagation(); 
+                    blowOutSingleCandle(flame);
+                };
+
+                candleFlames.push(flame); 
+
+                const body = document.createElement('div');
+                body.className = 'candle-body relative';
+                
+                body.appendChild(wick);
+                candleWrapper.appendChild(flame);
+                candleWrapper.appendChild(body);
+                candlesContainer.appendChild(candleWrapper);
+            }
+        }
+        
+        /**
+         * Tek bir mumu söndürür ve toplam sönen mum sayısını kontrol eder.
+         */
+        function blowOutSingleCandle(flameElement) {
+            if (flameElement.classList.contains('off')) return; 
+
+            flameElement.classList.add('off');
+            candlesOutCount++;
+
+            if (candlesOutCount === NUM_CANDLES) {
+                blowOutAllCandles(); 
+            }
+        }
+
+        /**
+         * Mikrofon erişimini ve ses analizini başlatır.
+         */
+        async function setupAudio() {
+            if (audioContext && microphone) {
+                startMusic();
+                analyseSound();
+                return;
+            }
+
+            if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+                return;
+            }
+
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                
+                startMusic(); 
+
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                analyser = audioContext.createAnalyser();
+                microphone = audioContext.createMediaStreamSource(stream);
+                
+                analyser.fftSize = 2048;
+                dataArray = new Uint8Array(analyser.frequencyBinCount);
+                
+                microphone.connect(analyser);
+
+                instructionText.textContent = translations[currentLang].instruction;
+                analyseSound();
+
+            } catch (err) {
+                const errorMessage = currentLang === 'tr' ? 
+                    "HATA: Mikrofon erişimi reddedildi. Mumları üflemek için izin verin." : 
+                    "ERROR: Microphone access denied. Please allow to blow out the candles.";
+                instructionText.textContent = errorMessage;
+                noiseLabel.parentElement.style.display = 'none';
+                console.error('Mikrofon erişiminde hata:', err);
+            }
+        }
+
+        /**
+         * Ses seviyesini sürekli analiz eden döngü.
+         */
+        function analyseSound() {
+            if (allCandlesOut) {
+                return;
+            }
+
+            analyser.getByteFrequencyData(dataArray);
+
+            let sum = 0;
+            for (let i = 0; i < dataArray.length; i++) {
+                sum += dataArray[i];
+            }
+            const average = (sum / dataArray.length);
+
+            const noiseLevel = Math.min(100, Math.round((average / 1.8) * (100 / 100))); 
+            
+            updateNoiseBar(noiseLevel);
+
+            if (noiseLevel > BLOW_THRESHOLD) {
+                candleFlames.forEach(flame => {
+                    blowOutSingleCandle(flame);
+                });
+            }
+
+            requestAnimationFrame(analyseSound);
+        }
+
+        /**
+         * Gürültü çubuğunun genişliğini günceller.
+         */
+        function updateNoiseBar(level) {
+            const barWidth = Math.min(100, level * (100 / BLOW_THRESHOLD)); 
+            
+            noiseLevelBar.style.width = `${barWidth}%`;
+            
+            if (level >= BLOW_THRESHOLD) {
+                noiseLevelBar.classList.remove('bg-green-500');
+                noiseLevelBar.classList.add('bg-red-500');
+            } else {
+                noiseLevelBar.classList.remove('bg-red-500');
+                noiseLevelBar.classList.add('bg-green-500');
+            }
+        }
+
+        /**
+         * Tüm mumlar söndüğünde tetiklenir.
+         */
+        function blowOutAllCandles() {
+            if (allCandlesOut) return;
+
+            if (Tone.Transport.state === 'started') {
+                Tone.Transport.stop();
+            }
+
+            allCandlesOut = true;
+            
+            instructionText.textContent = translations[currentLang].successTitle; 
+            
+            setTimeout(() => {
+                successMessage.classList.add('show');
+            }, 500); 
+        }
+
+        /**
+         * Uygulamayı başlangıç durumuna döndürür.
+         */
+        function resetApp() {
+            allCandlesOut = false;
+            candlesOutCount = 0;
+            
+            candleFlames.forEach(flame => {
+                flame.classList.remove('off');
+            });
+
+            successMessage.classList.remove('show');
+            instructionText.textContent = translations[currentLang].instruction;
+            
+            applyTheme(currentTheme); 
+
+            startMusic(); 
+            analyseSound(); 
+            updateNoiseBar(0); 
+        }
+
+
+        // --- Olay Dinleyicileri ---
+
+        // 1. İsim/Yıl/Mesaj Formu Gönderme (İPTAL EDİLDİ)
+        /*
+        nameForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            nameModal.classList.add('hidden');
+            updateText(currentLang);
+            setupAudio(); 
+        });
+        */
+
+        // 2. Dil Değiştirme Butonu
+        langToggle.addEventListener('click', () => {
+            currentLang = currentLang === 'tr' ? 'en' : 'tr';
+            updateText(currentLang);
+        });
+        
+        // 3. Tema Seçici (KALDIRILDI)
+        /*
+        themeSelector.addEventListener('change', (e) => {
+            applyTheme(e.target.value);
+        });
+        */
+
+        // 4. Sıfırlama Butonu
+        resetButton.addEventListener('click', resetApp);
+
+
+        // --- Uygulama Başlatma ---
+        window.onload = () => {
+            setupCandles(); 
+            const initialTheme = getInitialTheme();
+            applyTheme(initialTheme); 
+            updateText('tr'); 
+            successMessage.classList.remove('show'); 
+            resizeGame(); // İlk boyutlandırma
+            
+            // Müzik ve Ses Analizini Başlat (Otomatik)
+            // Not: Tarayıcı politikaları gereği kullanıcı etkileşimi gerekebilir.
+            // Ancak kullanıcı sayfaya tıkladığında veya mumlara dokunduğunda zaten çalışacaktır.
+            setupAudio().catch(e => console.log("Otomatik ses başlatma engellendi, kullanıcı etkileşimi bekleniyor.", e));
+            
+            // Sayfaya ilk tıklamada sesi garantiye al
+            document.body.addEventListener('click', function initAudio() {
+                setupAudio();
+                document.body.removeEventListener('click', initAudio);
+            }, { once: true });
+        };
+
+        // --- Ekran Boyutlandırma (Responsive Scaling) ---
+        function resizeGame() {
+            const container = document.getElementById('game-container');
+            if (!container) return;
+            
+            // Tasarımın baz alındığı çözünürlük (Genişlik x Yükseklik)
+            const baseWidth = 600;
+            const baseHeight = 900;
+            
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+            
+            // Hem genişlik hem yüksekliğe göre sığdırma oranı hesapla
+            const scaleX = windowWidth / baseWidth;
+            const scaleY = windowHeight / baseHeight;
+            
+            // En küçük oranı seçerek ekrana sığmasını sağla (Aspect Ratio korunur)
+            // 0.95 çarpanı kenarlarda biraz boşluk bırakmak için
+            const scale = Math.min(scaleX, scaleY) * 0.95; 
+            
+            container.style.transform = `scale(${scale})`;
+        }
+
+        window.addEventListener('resize', resizeGame);
+    </script>
+</body>
+</html>
