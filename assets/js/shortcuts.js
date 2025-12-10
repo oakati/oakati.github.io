@@ -1,6 +1,6 @@
 
 document.addEventListener('keydown', function(event) {
     if (event.altKey && event.shiftKey && (event.key === 'c' || event.key === 'C' || event.code === 'KeyC')) {
-        window.location.href = '{{ "/bday.html" | relative_url }}';
+        window.location.href = '/bday.html';
     }
 });
