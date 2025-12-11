@@ -39,7 +39,12 @@
 
         @media (max-width: 640px) {
             body {
-                padding: 5px;
+                padding: 10px;
+            }
+            
+            /* Mobilde daha fazla boşluk */
+            #game-container > * {
+                margin-bottom: 1rem;
             }
         }
 
@@ -162,7 +167,8 @@
 
         @media (max-width: 640px) {
             .cake-base {
-                margin-top: 10px;
+                margin-top: 20px;
+                transform: scale(1.1); /* Mobilde pasta biraz daha büyük */
             }
         }
 
@@ -408,12 +414,52 @@
 
         /* Mobil Cihazlar İçin Ek Ayarlamalar */
         @media (max-width: 640px) {
-            /* Font boyutları zaten HTML'de responsive yapıldı */
+            /* Font boyutları ve spacing'ler mobilde daha büyük */
+            #main-greeting {
+                font-size: 2rem !important;
+                line-height: 1.2;
+            }
+            
+            #age-info {
+                font-size: 1.125rem !important;
+            }
+            
+            #instruction-text {
+                font-size: 1rem !important;
+                padding: 12px !important;
+            }
+            
+            #noise-label {
+                font-size: 0.875rem !important;
+            }
+            
+            #success-title {
+                font-size: 1.5rem !important;
+            }
+            
+            #success-text-name {
+                font-size: 1rem !important;
+            }
+            
+            #success-text-message {
+                font-size: 0.875rem !important;
+            }
+            
+            #reset-button {
+                font-size: 0.875rem !important;
+                padding: 10px 20px !important;
+            }
+            
             /* Ekstra küçük ekranlar için */
             @media (max-height: 600px) {
                 #game-container {
                     justify-content: flex-start;
-                    padding-top: 10px;
+                    padding-top: 15px;
+                }
+                
+                .cake-base {
+                    transform: scale(1.0);
+                    margin-top: 10px;
                 }
             }
         }
@@ -431,6 +477,15 @@
             transform-origin: center center;
             position: relative;
             margin: 0 auto;
+            padding: 10px;
+        }
+
+        @media (max-width: 640px) {
+            #game-container {
+                padding: 15px;
+                justify-content: flex-start;
+                padding-top: 20px;
+            }
         }
 
         /* İlkbahar Çimen ve Çiçekler */
@@ -551,10 +606,10 @@
     <div id="game-container" class="relative z-40">
         
         <!-- Üst Kontrol Paneli -->
-        <div class="flex space-x-2 md:space-x-4 mb-2 md:mb-4 z-50">
+        <div class="flex space-x-3 md:space-x-4 mb-4 md:mb-4 z-50">
             <!-- Dil Değiştirme Butonu -->
             <button id="lang-toggle" 
-                    class="p-1 md:p-2 bg-white text-red-600 rounded-full text-xs md:text-sm font-semibold shadow-lg hover:bg-gray-100 transition">
+                    class="p-2 md:p-2 bg-white text-red-600 rounded-full text-sm md:text-sm font-semibold shadow-lg hover:bg-gray-100 transition">
                 English
             </button>
             
@@ -562,14 +617,14 @@
         </div>
 
         <!-- Başlık Mesajı -->
-        <div class="bg-white p-2 md:p-4 rounded-xl shadow-xl text-center mb-3 md:mb-6 border-4 border-red-600">
-            <h1 id="main-greeting" class="text-2xl md:text-4xl lg:text-6xl font-extrabold text-green-700 mb-1 md:mb-2">
+        <div class="bg-white p-4 md:p-4 rounded-xl shadow-xl text-center mb-6 md:mb-6 border-4 border-red-600">
+            <h1 id="main-greeting" class="text-4xl md:text-4xl lg:text-6xl font-extrabold text-green-700 mb-2 md:mb-2">
                 İYİ Kİ DOĞDUN!
             </h1>
-            <p id="age-info" class="text-sm md:text-xl text-red-600 font-bold"></p>
+            <p id="age-info" class="text-lg md:text-xl text-red-600 font-bold"></p>
         </div>
 
-        <p id="instruction-text" class="text-sm md:text-xl text-white mb-4 md:mb-8 text-center font-semibold bg-red-600 p-1 md:p-2 rounded-lg shadow-md">
+        <p id="instruction-text" class="text-lg md:text-xl text-white mb-6 md:mb-8 text-center font-semibold bg-red-600 p-3 md:p-2 rounded-lg shadow-md">
             Mumları üfleyin VEYA üzerine dokunun!
         </p>
 
@@ -597,19 +652,19 @@
         </div>
 
         <!-- Mikrofon Gürültü Seviyesi Göstergesi -->
-        <div class="w-full max-w-sm mt-4 md:mt-10 px-2">
-            <div id="noise-label" class="text-center text-white mb-1 md:mb-2 font-bold text-xs md:text-base">Gürültü Seviyesi (Eşik: 10):</div>
-            <div class="bg-gray-700 h-4 md:h-6 rounded-full overflow-hidden shadow-inner border border-gray-500">
+        <div class="w-full max-w-sm mt-6 md:mt-10 px-4">
+            <div id="noise-label" class="text-center text-white mb-2 md:mb-2 font-bold text-base md:text-base">Gürültü Seviyesi (Eşik: 10):</div>
+            <div class="bg-gray-700 h-6 md:h-6 rounded-full overflow-hidden shadow-inner border border-gray-500">
                 <div id="noise-level-bar" class="h-full bg-green-500 transition-all duration-100 ease-linear" style="width: 0%;"></div>
             </div>
         </div>
 
         <!-- Başarı Mesajı -->
-        <div id="success-message" class="confetti-message mt-4 md:mt-12 p-3 md:p-5 bg-white rounded-lg shadow-2xl border-4 border-green-700 max-w-lg mx-auto text-center z-40">
-            <h2 id="success-title" class="text-xl md:text-3xl font-bold text-red-700">MUMLAR SÖNDÜ! 🎉</h2>
-            <p id="success-text-name" class="text-sm md:text-lg font-semibold text-green-800 mt-1 md:mt-2"></p>
-            <p id="success-text-message" class="text-xs md:text-md text-gray-700 italic mt-1 mb-2 md:mb-4"></p>
-            <button id="reset-button" class="py-1 md:py-2 px-3 md:px-6 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition shadow-md text-xs md:text-base">
+        <div id="success-message" class="confetti-message mt-6 md:mt-12 p-4 md:p-5 bg-white rounded-lg shadow-2xl border-4 border-green-700 max-w-lg mx-auto text-center z-40">
+            <h2 id="success-title" class="text-2xl md:text-3xl font-bold text-red-700">MUMLAR SÖNDÜ! 🎉</h2>
+            <p id="success-text-name" class="text-base md:text-lg font-semibold text-green-800 mt-2 md:mt-2"></p>
+            <p id="success-text-message" class="text-sm md:text-md text-gray-700 italic mt-2 mb-3 md:mb-4"></p>
+            <button id="reset-button" class="py-2 md:py-2 px-4 md:px-6 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition shadow-md text-sm md:text-base">
                 Mumları Tekrar Yak / Yeniden Başlat
             </button>
         </div>
@@ -1256,29 +1311,39 @@
             const container = document.getElementById('game-container');
             if (!container) return;
             
-            // Tasarımın baz alındığı çözünürlük (Genişlik x Yükseklik)
-            const baseWidth = 600;
-            const baseHeight = 900;
-            
-            // Viewport boyutlarını al (padding dahil)
             const windowWidth = window.innerWidth;
             const windowHeight = window.innerHeight;
+            const isMobile = windowWidth <= 640;
             
-            // Body padding'i hesaba kat (mobilde 5px, desktop'ta 10px)
-            const bodyPadding = windowWidth <= 640 ? 10 : 20;
-            const availableWidth = windowWidth - bodyPadding;
-            const availableHeight = windowHeight - bodyPadding;
-            
-            // Hem genişlik hem yüksekliğe göre sığdırma oranı hesapla
-            const scaleX = availableWidth / baseWidth;
-            const scaleY = availableHeight / baseHeight;
-            
-            // En küçük oranı seçerek ekrana sığmasını sağla (Aspect Ratio korunur)
-            // 0.98 çarpanı kenarlarda minimal boşluk bırakmak için
-            const scale = Math.min(scaleX, scaleY) * 0.98; 
-            
-            container.style.transform = `scale(${scale})`;
-            container.style.transformOrigin = 'center center';
+            if (isMobile) {
+                // Mobilde scale kullanma, doğrudan responsive CSS kullan
+                container.style.transform = 'none';
+                container.style.width = '100%';
+                container.style.height = 'auto';
+                container.style.maxHeight = '100vh';
+            } else {
+                // Desktop'ta scale kullan
+                // Tasarımın baz alındığı çözünürlük (Genişlik x Yükseklik)
+                const baseWidth = 600;
+                const baseHeight = 900;
+                
+                // Body padding'i hesaba kat
+                const bodyPadding = 20;
+                const availableWidth = windowWidth - bodyPadding;
+                const availableHeight = windowHeight - bodyPadding;
+                
+                // Hem genişlik hem yüksekliğe göre sığdırma oranı hesapla
+                const scaleX = availableWidth / baseWidth;
+                const scaleY = availableHeight / baseHeight;
+                
+                // En küçük oranı seçerek ekrana sığmasını sağla (Aspect Ratio korunur)
+                const scale = Math.min(scaleX, scaleY) * 0.98; 
+                
+                container.style.transform = `scale(${scale})`;
+                container.style.transformOrigin = 'center center';
+                container.style.width = '600px';
+                container.style.height = '900px';
+            }
         }
 
         // Resize event listener
