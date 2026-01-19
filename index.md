@@ -31,11 +31,11 @@ title: "About me"
   gtag('config', 'G-TTC6RSBSSV');
 </script>
 
-![Me](https://scholar.googleusercontent.com/citations?view_op=view_photo&user=Ae0LSsUAAAAJ&citpid=3){:style="display: block;margin-left: auto;margin-right: auto;float: right;"}I graduated from B.Sc. in [Electrical and Electronics Engineering](https://ee.boun.edu.tr/) at [Boğaziçi Üniversitesi](http://www.boun.edu.tr/en-US/Index), İstanbul, Türkiye. I was an Erasmus student at [Politechnika Poznańska (PUT)](https://www.put.poznan.pl/en), Poznań, Poland, in Spring 2021. 
+![Me](https://scholar.googleusercontent.com/citations?view_op=view_photo&user=Ae0LSsUAAAAJ&citpid=3){:style="display: block;margin-left: auto;margin-right: auto;float: right;"}I graduated from B.Sc. in [Electrical and Electronics Engineering](https://ee.boun.edu.tr/) at [Boğaziçi Üniversitesi](http://www.boun.edu.tr/en-US/Index), İstanbul, Türkiye. I was an Erasmus student at [Politechnika Poznańska (PUT)](https://www.put.poznan.pl/en), Poznań, Poland, in Spring 2021. Now, I am pursuing my M.Sc. degree in information and communication engineering at TU Darmstadt, Germany since 2024.
 
 I was with [Antennas and Propagation Research Laboratory (BOUNtenna)](https://bountenna.boun.edu.tr/), İstanbul, Türkiye, as an Undergraduate Research Assistant from July 2019 to March 2022. Also, I did two internships at [Turkcell](https://www.turkcell.com.tr/english-support) and [ASELSAN](https://aselsan.com.tr/en) during the summers of 2020 and 2021, respectively.
 
-I was with [Poilabs](https://www.poilabs.com/en/home/), as an embedded software developer intern during Summer 2022. I have been working as a software engineer at [Aselsan](https://www.aselsan.com/en) since March 2023. My current research interests include communication systems and embedded software development.
+I was with [Poilabs](https://www.poilabs.com/en/home/), as an embedded software developer intern during Summer 2022. I had worked as a software engineer at [Aselsan](https://www.aselsan.com/en) between March 2023 and February 2025. I am a working student at the [System Security Lab (SSL)](https://www.informatik.tu-darmstadt.de/systemsecurity/system_security_lab_sys/index.en.jsp), TU Darmstadt since January 2026.
 
 <a href="https://info.flagcounter.com/Y8CZ"><img src="https://s11.flagcounter.com/count2/Y8CZ/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
 
