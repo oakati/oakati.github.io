@@ -16,7 +16,11 @@ title: "Portfolio"
   gtag('config', 'G-TTC6RSBSSV');
 </script>
 
-| Repository       | Description      |
+<!-- Coming Soon (CS) -->
+<div style="font-size:2rem; color:#64748b; font-weight:700; letter-spacing:0.1em; text-align:center; margin:48px 0;">CS — Coming Soon</div>
+
+
+<!-- * | Repository       | Description      |
 |------------------|------------------|
 | [EE-443-Microprocessors-Labs](https://github.com/oakati/EE-443-Microprocessors-Labs)| Assembly or C programs realized on a evaluation board (De1-SoC) during the laboratory experiments of EE 443 (Microprocessors) course. 
 | [LeetCode](https://github.com/oakati/LeetCode)                                                                                                                        | Solutions to LeetCode problems (mostly written in Python)       |
@@ -31,7 +35,7 @@ title: "Portfolio"
 | [Frequency-Domain-Equalization-and-Channel-Equalization-Algorithms](https://github.com/oakati/Frequency-Domain-Equalization-and-Channel-Equalization-Algorithms)      | Simulations of Frequency Domain and Channel Equalization in Matlab      |
 |[Chatbot-Argel](https://github.com/oakati/Chatbot-Argel)| A chatbot developed by using Rasa to answer the questions of interns.|
 
-<!-- * [EE-443-Microprocessors-Labs](https://github.com/oakati/EE-443-Microprocessors-Labs)
+[EE-443-Microprocessors-Labs](https://github.com/oakati/EE-443-Microprocessors-Labs)
 * [LeetCode](https://github.com/oakati/LeetCode)
 * [Post-Filtering-Photographic-Tool](https://github.com/oakati/Post-Filtering-Photographic-Tool)
 * [Eigenvalues-and-Eigenvectors-Calculator](https://github.com/oakati/Eigenvalues-and-Eigenvectors-Calculator)
