@@ -23,6 +23,7 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
 #   - {file: "fav_links.md"}
 #   - {file: "gallery.md"}
   - {file: "contact.md"}
+  - {file: "chat.md"}
 
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
@@ -32,6 +33,11 @@ external:                  # shows a footer with social links - for available ic
 
 
 remote_theme: niklasbuschmann/contrast@v2.11
+
+# LLM Chat - tunnel URL (cloudflared/ngrok). Update when you start your tunnel.
+llm_backend_url: "https://accuracy-breathing-productivity-kenneth.trycloudflare.com"
+
+exclude: ['llm-proxy']
 
 plugins:
   - jekyll-remote-theme
