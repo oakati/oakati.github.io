@@ -23,7 +23,7 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
 #   - {file: "fav_links.md"}
 #   - {file: "gallery.md"}
   - {file: "contact.md"}
-  - {file: "chat.md"}
+#  - {file: "chat.md"}
 
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
