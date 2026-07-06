@@ -19,7 +19,7 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "index.md"}
   - {file: "portfolio.md"}
   - {file: "publications.md"}
-  - {file: "karikatur.md"}
+#  - {file: "karikatur.md"}
 #   - {file: "posts.md"}
 #   - {file: "fav_links.md"}
 #   - {file: "gallery.md"}
